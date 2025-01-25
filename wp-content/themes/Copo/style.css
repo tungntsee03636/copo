@@ -587,6 +587,9 @@ picture{
         padding-top: 0px;
         border: none;
     }
+    .banner-bottom{
+
+    }
 }
 
 @media print, screen and (min-width: 768px) {
