@@ -40,7 +40,7 @@
             ?>
         </nav>
 
-        <img class="ham" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ham.png">
+        <img class="ham sp-br" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ham.png">
     </div>
 </header>
 
