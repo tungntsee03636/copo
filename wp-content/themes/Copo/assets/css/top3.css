@@ -25,3 +25,127 @@
 #top3 .single-content .content01 .company-box{
     padding: 66px 0 72.7px 0;
 }
+
+#top3 .calling-list{
+    margin:66.8px auto 0 auto;
+    max-width: 1250px;
+}
+
+#top3 .calling-list .calling-item{
+    padding: 43px 41px 58px;
+    border-radius: 39px;
+    border: solid 4px #e0e0e0;
+    background-image: linear-gradient(to bottom, #fff, #ebebeb);
+    position: relative;
+}
+#top3 .calling-list .calling-item .calling-item-inner{
+    align-items: center;
+}
+#top3 .calling-list .calling-item .calling-item-inner .box-logo{
+    width: 324px;
+}
+
+#top3 .calling-list .calling-item .calling-item-inner .box-text{
+    width: 520px;
+}
+#top3 .calling-list .calling-item .calling-item-inner .box-text .tag{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+}
+#top3 .calling-list .calling-item .calling-item-inner .box-text .tag li{
+    font-size: 15px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    text-align: left;
+    color: #52b8ff;
+    padding: 8px 12px 3px 22px;
+    border-radius: 7px;
+    border: solid 2px #52b8ff;
+    background-color: #fff;
+    width: fit-content;
+}
+#top3 .calling-list .calling-item .calling-item-inner .box-text .tag li:first-child{
+    color: #ffac4a;
+    border: solid 2px #ffac4a;
+}
+#top3 .calling-list .calling-item .calling-item-inner .box-img{
+    width:calc(100% - 324px - 520px - 62px);
+}
+
+
+#top3 .calling-list .calling-item .calling-item-inner .box-text .text{
+    font-size: 23px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.39;
+    letter-spacing: normal;
+    text-align: left;
+    color: #242424;
+    margin-bottom:3.2px;
+}
+#top3 .calling-list .calling-item .calling-item-inner .box-text .text:last-of-type{
+    margin-bottom:0;
+}
+
+#top3 .calling-list .calling-item .calling-item-inner .box-text .text.map img{
+    width: 17px;
+    margin-right:5.5px;
+    position: relative;
+    top:-5px;
+}
+
+#top3 .calling-list .calling-item .calling-item-inner .box-text .text.map{
+    color: #919191;
+    margin-top:13.6px;
+}
+
+#top3 .calling-list .calling-item .calling-item-inner .box-text .ttl{
+    font-size: 32px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+    color: #242424;
+    margin-top:22px;
+}
+
+#top3 .calling-list .calling-item .calling-item-inner .box-img img{
+    border-radius: 20px;
+}
+#top3 .calling-list .calling-item{
+    margin-bottom:39px;
+}
+
+#top3 .calling-list .calling-item:last-child{
+    margin-bottom:0;
+}
+
+#top3 .calling-list .calling-item .label{
+    font-size: 23px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    padding: 14px 29px 11px 31px;
+    border-radius: 7px;
+    background-color: #e80000;
+    width: fit-content;
+    top:36px;
+    left:-14px;
+    position: absolute;
+}
+
+#top3 .single-content{
+    padding: 74px 58.4px 124px 69.4px;
+}
+

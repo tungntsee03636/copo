@@ -45,6 +45,75 @@ get_header();
 
             </div>
 
+            <div class="calling-list">
+                <div class="calling-item">
+                    <p class="label">応募受付中</p>
+                    <div class="calling-item-inner fl">
+                        <div class="box-logo">
+                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/toyota.png" alt="">
+                        </div>
+                        <div class="box-text">
+                            <ul class="tag">
+                                <li>スペシャルメッセージ</li>
+                                <li>動画</li>
+                            </ul>
+                            <h3 class="ttl">株式会社XXXXXXX</h3>
+                            <p class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                            <p class="text map"><span> <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/mappen.png" alt=""></span>XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                            <p class="text phone">000-0000-0000</p>
+                            <p class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                        </div>
+                        <div class="box-img">
+                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/callimg.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="calling-item">
+                    <p class="label">応募受付中</p>
+                    <div class="calling-item-inner fl">
+                        <div class="box-logo">
+                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/toyota.png" alt="">
+                        </div>
+                        <div class="box-text">
+                            <ul class="tag">
+                                <li>スペシャルメッセージ</li>
+                                <li>動画</li>
+                            </ul>
+                            <h3 class="ttl">株式会社XXXXXXX</h3>
+                            <p class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                            <p class="text map"><span> <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/mappen.png" alt=""></span>XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                            <p class="text phone">000-0000-0000</p>
+                            <p class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                        </div>
+                        <div class="box-img">
+                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/callimg.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="calling-item">
+                    <p class="label">応募受付中</p>
+                    <div class="calling-item-inner fl">
+                        <div class="box-logo">
+                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/toyota.png" alt="">
+                        </div>
+                        <div class="box-text">
+                            <ul class="tag">
+                                <li>スペシャルメッセージ</li>
+                                <li>動画</li>
+                            </ul>
+                            <h3 class="ttl">株式会社XXXXXXX</h3>
+                            <p class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                            <p class="text map"><span> <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/mappen.png" alt=""></span>XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                            <p class="text phone">000-0000-0000</p>
+                            <p class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                        </div>
+                        <div class="box-img">
+                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/callimg.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
