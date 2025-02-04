@@ -7,7 +7,7 @@ get_header();
 
 <section id="single-company" class="single template-single-company inner">
     <h2 class="single-ttl">
-        <span class="en"><b>P</b>ick up COMPANY</span>
+        <span class="en"><small>P</small>ick up COMPANY</span>
         <span class="jp">おすすめ企業</span>
     </h2>
 

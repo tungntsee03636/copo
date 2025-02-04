@@ -18,7 +18,7 @@
 
 
 <body>
-<div class="main-wrap">
+<main class="main-wrap">
 
 <!--HEADER-->
 <div class="main-header">

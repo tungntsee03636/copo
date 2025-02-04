@@ -1,0 +1,27 @@
+#top3 .single-content .content01{
+    padding-top: 0;
+}
+#top3 .single-content .content01 picture{
+    max-width: 1328px;
+}
+#top3 .single-content .content01 h1{
+    margin: 133.2px 0 23px 0;
+    font-size: 59px;
+    line-height: 103px;
+}
+
+#top3 .single-content .content01 h2{
+    font-size: 38px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 62px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    margin: 0px 0 0px 0;
+}
+
+#top3 .single-content .content01 .company-box{
+    padding: 66px 0 72.7px 0;
+}

@@ -12,7 +12,7 @@ body {
     background-size: cover;
     background-position: top;
     font-family: 'Yu Gothic',sans-serif;
-    
+
 }
 
 .main-wrap{
@@ -184,7 +184,7 @@ picture{
     text-transform: uppercase;
     font-family: "Bebas Neue", serif;
 }
-.single .single-ttl span.en b{
+.single .single-ttl span.en small{
     color:#ed1c24;
 }
 .single .single-ttl span.jp{
@@ -591,14 +591,8 @@ picture{
 
 @media print, screen and (min-width: 768px) {
 
-    .main-wrap{
-        /*min-width: 1200px;*/
-    }
-    html, body{
+    body{
         min-width: 1200px;
-        /*height: 100%;*/
-        overflow-x: hidden;
-        /*overflow-y: auto;*/
     }
 
 }
