@@ -46,7 +46,7 @@ get_header();
             </div>
 
             <div class="calling-list">
-                <div class="calling-item">
+                <div class="calling-item js-fadein">
                     <p class="label">応募受付中</p>
                     <div class="calling-item-inner fl">
                         <div class="box-logo">
@@ -68,7 +68,7 @@ get_header();
                         </div>
                     </div>
                 </div>
-                <div class="calling-item">
+                <div class="calling-item js-fadein">
                     <p class="label">応募受付中</p>
                     <div class="calling-item-inner fl">
                         <div class="box-logo">
@@ -90,7 +90,7 @@ get_header();
                         </div>
                     </div>
                 </div>
-                <div class="calling-item">
+                <div class="calling-item js-fadein">
                     <p class="label">応募受付中</p>
                     <div class="calling-item-inner fl">
                         <div class="box-logo">

@@ -1,0 +1,77 @@
+#movie .movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+#movie .movie-item img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+#movie .movie-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination a, .pagination span {
+    padding: 10px 15px;
+    margin: 5px;
+    background: #ddd;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.pagination .current {
+    background: #333;
+    color: white;
+}
+
+/* Popup */
+#movie .popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#movie .popup-content {
+    background: white;
+    width: 80%; /* Giảm kích thước popup */
+    max-width: 800px; /* Giới hạn chiều rộng */
+    padding: 20px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10px;
+}
+
+#movie .close-btn {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Giới hạn kích thước video */
+#movie .popup-movie-text {
+    width: 100%;
+    position: relative;
+    min-height: 500px;
+}
+
+#movie .popup-movie-text iframe,
+#movie .popup-movie-text video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+}

@@ -42,7 +42,7 @@
     align-items: center;
 }
 #top3 .calling-list .calling-item .calling-item-inner .box-logo{
-    width: 324px;
+    width:calc(100% - 261px - 520px - 62px);
 }
 
 #top3 .calling-list .calling-item .calling-item-inner .box-text{
@@ -73,7 +73,7 @@
     border: solid 2px #ffac4a;
 }
 #top3 .calling-list .calling-item .calling-item-inner .box-img{
-    width:calc(100% - 324px - 520px - 62px);
+    width: 261px;
 }
 
 
