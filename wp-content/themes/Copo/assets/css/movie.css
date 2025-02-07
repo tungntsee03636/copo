@@ -5,31 +5,42 @@
     max-width: 1294px;
     margin:0 auto;
     row-gap: 34.7px;
+    width: calc(100% - 40px);
 }
 
 #movie .movie-item{
     width: 48.8755%;
 }
 
-
+#movie .movie-item:hover{
+    opacity: .7;
+}
 
 /* Pagination */
 .pagination {
     text-align: center;
-    margin: 20px 0;
+    margin: 100px 0 0 0;
+    display: flex;
+    justify-content: center;
+    column-gap: 42px;
 }
-
+.pagination .prev, .pagination .next{
+    display: none;
+}
 .pagination a, .pagination span {
-    padding: 10px 15px;
-    margin: 5px;
-    background: #ddd;
     text-decoration: none;
-    border-radius: 5px;
+    font-size: 37px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.76;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fbb03b;
 }
 
 .pagination .current {
-    background: #333;
-    color: white;
+    color:#de8700;
 }
 
 /* Popup */
@@ -43,7 +54,7 @@
 #movie .popup-content {
     width: 80%;
     max-width: 1209px;
-    padding: 23px;
+    padding: 25px 25px 40px 25px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -52,6 +63,52 @@
     background-image: linear-gradient(to bottom, #fff, #ebebeb);
 }
 
+
+#movie .popup-content .movie-ttl{
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.77;
+    letter-spacing: 1.3px;
+    text-align: center;
+    color: #181818;
+    margin:43px 0 32px 0;
+}
+
+#movie .popup-content .link-list{
+    max-width: 928px;
+    margin:0 auto;
+}
+
+#movie .popup-content .link-list li a{
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.77;
+    letter-spacing: 1.3px;
+    text-align: center;
+    color: #fff;
+    display: block;
+    padding: 18.6px 130px 16.4px 130px;
+    border-radius: 35px;
+    background-image: linear-gradient(to bottom, #000, #505050);
+    width: fit-content;
+    position: relative;
+}
+
+#movie .popup-content .link-list li a img{
+    position: absolute;
+    max-width: 30px;
+    top:50%;
+    transform: translateY(-50%);
+    right:45.7px;
+    transition: .3s;
+}
+#movie .popup-content .link-list li a:hover img{
+    right:40.7px;
+}
 #movie .close-btn {
     font-size: 25px;
     cursor: pointer;
@@ -60,16 +117,22 @@
     right: 0;
 }
 
-/* Giới hạn kích thước video */
 #movie .popup-movie-text {
     position: relative;
-    min-height: 553px;
+    /*min-height: 553px;*/
     padding: 30.7px 27.5px 28.5px 28.1px;
     box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.15);
     background-color: #fff;
 }
-
+#movie .tiktok-embed{
+    max-height: 626px;
+}
 #movie .popup-movie-text iframe,
 #movie .popup-movie-text video {
     min-height: 626px;
+}
+
+#movie .movie-list .novideos{
+    width: 100%;
+    text-align: center;
 }

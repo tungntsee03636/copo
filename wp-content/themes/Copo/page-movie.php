@@ -9,7 +9,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 // Query bài viết của post type "movie"
 $args = array(
     'post_type'      => 'movie',
-    'posts_per_page' => 3, // Số bài viết mỗi trang
+    'posts_per_page' => 4, // Số bài viết mỗi trang
     'paged'          => $paged
 );
 
@@ -37,8 +37,10 @@ $movies = new WP_Query($args);
                         $movie_id = get_the_ID();
                         $movie_content = get_field('movie', $movie_id); // Lấy custom field "movie"
                         $default_image =  get_stylesheet_directory_uri() . '/assets/img/movie01.png';
-
+                        $movie_title = get_the_title();
+                        $movie_link = get_permalink();
                         $feature_image = get_the_post_thumbnail_url($movie_id, 'medium');
+
                         if (!$feature_image) {
                             $feature_image = $default_image; // Nếu không có ảnh, dùng ảnh mặc định
                         }
@@ -49,12 +51,12 @@ $movies = new WP_Query($args);
                             $video_embed = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' . esc_attr($video_id) . '" frameborder="0" allowfullscreen></iframe>';
                         }
                         // Kiểm tra nếu là link TikTok
-//                        elseif (preg_match('/tiktok\.com/', $movie_content)) {
-//                            $video_embed = '<blockquote class="tiktok-embed" cite="' . esc_url($movie_content) . '" data-video-id="' . esc_attr($movie_content) . '" style="max-width: 100%; min-width: 300px;">
-//                            <a href="' . esc_url($movie_content) . '">Xem trên TikTok</a>
-//                        </blockquote>
-//                        <script async src="https://www.tiktok.com/embed.js"></script>';
-//                        }
+                        elseif (preg_match('/tiktok\.com\/@([^\/]+)\/video\/(\d+)/', $movie_content, $matches)) {
+                            $video_embed = '<blockquote class="tiktok-embed" cite="' . esc_url($movie_content) . '" data-video-id="' . esc_attr($matches[2]) . '" style="max-width: 100%; min-width: 300px;">
+                                <a href="' . esc_url($movie_content) . '">View in TikTok</a>
+                              </blockquote>
+                            <script async src="https://www.tiktok.com/embed.js"></script>';
+                        }
                         // Nếu là script Eviry
                         else {
                             $video_embed = $movie_content . '<script type="text/javascript" src="https://d1euehvbqdc1n9.cloudfront.net/001/eviry/js/eviry.player.min.js"></script>';
@@ -73,13 +75,19 @@ $movies = new WP_Query($args);
                                 <div class="popup-movie-text">
                                     <?php echo $video_embed; ?>
                                 </div>
+                                <h3 class="movie-ttl"><?php echo $movie_title; ?></h3>
+
+                                <ul class="link-list fl">
+                                    <li><a href="#">動画詳細を見る<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/darrowl.png"></a></li>
+                                    <li><a href="#">動画詳細を見る<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/darrowl.png"></a></li>
+                                </ul>
                             </div>
                         </div>
 
 
                     <?php endwhile; ?>
                 <?php else : ?>
-                    <p>No Videos Available.</p>
+                    <p class="novideos">No Videos Available.</p>
                 <?php endif; ?>
             </div>
 
@@ -99,7 +107,7 @@ $movies = new WP_Query($args);
 
 
         </div>
-
+        <?php wp_reset_postdata(); ?>
         <script>
             jQuery(document).ready(function($) {
                 $(".movie-item").click(function() {
