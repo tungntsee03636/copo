@@ -28,8 +28,7 @@
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg">
             </a>
         </div>
-
-        <nav class="main-menu pc-br">
+        <nav class="main-menu">
             <?php
             wp_nav_menu(array(
                 'menu' => 2,
@@ -39,8 +38,9 @@
             ));
             ?>
         </nav>
-
-        <img class="ham sp-br" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ham.png">
+        <button class="btn-menu">
+            <span class="bar"></span>
+        </button>
     </div>
 </div>
 

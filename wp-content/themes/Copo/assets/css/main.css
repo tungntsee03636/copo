@@ -405,8 +405,12 @@ picture{
     border-top:none;
     border-bottom:none;
 }
-
-
+.banner-bottom img{
+    width: 100%;
+}
+.footer img{
+    width:100%;
+}
 
 @media print, screen and (max-width: 767px) {
     body{
@@ -586,8 +590,86 @@ picture{
         padding-top: 0px;
         border: none;
     }
-    .banner-bottom{
+    /*MENU*/
+    .main-header .inner .main-menu{
+        position: absolute;
+        width: 100%;
+        background: rgb(255, 255, 255);
+        /*height: 0;*/
+        height: calc(100vh - 97px);
+        transition: .5s;
+        overflow: hidden;
+        top: 97px;
+        z-index: 9;
+        left: 0%;
+        opacity: 0;
+    }
+    .main-header.is-open .inner .main-menu {
+        /*height: calc(100vh - 97px);*/
+        opacity: 1;
+    }
+    .main-header .inner .main-menu ul{
+        flex-direction: column;
+    }
+    .main-header .btn-menu{
+        border: 0;
+        width: 36px;
+        height: 25px;
+        background-color: transparent;
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        top: 34px;
+        right: 15px;
+    }
+    .main-header .btn-menu .bar, .btn-menu .bar:before, .btn-menu .bar:after {
+        display: block;
+        position: absolute;
+        width: 36px;
+        height: 5px;
+        background-color: #000;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    .main-header .btn-menu .bar {
+        top: 10px;
+        left: 0;
+    }
+    .main-header .btn-menu .bar:before {
+        position: absolute;
+        content: '';
+        top: 10px;
+        left: 0;
+    }
+    .main-header .btn-menu .bar:after {
+        position: absolute;
+        content: '';
+        top: -10px;
+        left: 0;
+    }
+    body.lock{
+        overflow: hidden;
+    }
 
+    .main-header.is-open .btn-menu .bar:before {
+        top: 0;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .main-header.is-open .btn-menu .bar:after {
+        top: 0;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    .main-header.is-open .btn-menu .bar {
+        background-color: transparent;
+    }
+    .main-header .inner .main-menu ul li a{
+        display: block;
+        padding:20px 0;
+    }
+    .main-header .inner .main-menu ul li{
+        border-bottom: 1px solid black;
     }
 }
 
@@ -596,6 +678,7 @@ picture{
     body{
         min-width: 1200px;
     }
+
 
 }
 

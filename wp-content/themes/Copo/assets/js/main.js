@@ -61,7 +61,17 @@ jQuery(function ($) {
     });
 
 
-    
+    // menu mobile
+    $(".btn-menu").click(function() {
+        $(".main-header").toggleClass("is-open");
+        // alert("1");
+        $("body").toggleClass("lock");
+    });
+
+    $(".main-menu li:has(ul) > a").click(function(e) {
+        e.preventDefault();
+        $(this).next("ul").slideToggle();
+    });
 
     if (isSp) {
         // only sp
