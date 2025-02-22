@@ -8,8 +8,8 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 // Query bài viết của post type "movie"
 $args = array(
-    'post_type'      => 'movie',
-    'posts_per_page' => 4, // Số bài viết mỗi trang
+    'post_type'      => 'movies',
+    'posts_per_page' => 2, // Số bài viết mỗi trang
     'paged'          => $paged
 );
 

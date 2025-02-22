@@ -16,33 +16,6 @@
     opacity: .7;
 }
 
-/* Pagination */
-.pagination {
-    text-align: center;
-    margin: 100px 0 0 0;
-    display: flex;
-    justify-content: center;
-    column-gap: 42px;
-}
-.pagination .prev, .pagination .next{
-    display: none;
-}
-.pagination a, .pagination span {
-    text-decoration: none;
-    font-size: 37px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.76;
-    letter-spacing: normal;
-    text-align: center;
-    color: #fbb03b;
-}
-
-.pagination .current {
-    color:#de8700;
-}
-
 /* Popup */
 #movie .popup {
     display: none;
