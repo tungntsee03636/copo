@@ -68,10 +68,22 @@ jQuery(function ($) {
         $("body").toggleClass("lock");
     });
 
-    $(".main-menu li:has(ul) > a").click(function(e) {
-        e.preventDefault();
-        $(this).next("ul").slideToggle();
-    });
+    // $(".main-menu li:has(ul) > a").click(function(e) {
+    //     e.preventDefault();
+    //     $(this).next("ul").slideToggle();
+    // });
+
+    // $(window).scroll(function() {
+    //     var menu = $('.main-header'); // Thay 'your-menu-id' bằng ID của menu
+    //     if ($(this).scrollTop() < 100) {
+    //         menu.removeClass("collapse")
+    //     } else {
+    //
+    //         menu.addClass("collapse")
+    //     }
+    // });
+
+
 
     if (isSp) {
         // only sp

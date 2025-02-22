@@ -38,9 +38,9 @@
             ));
             ?>
         </nav>
-        <button class="btn-menu">
+        <div class="btn-menu">
             <span class="bar"></span>
-        </button>
+        </div>
     </div>
 </div>
 

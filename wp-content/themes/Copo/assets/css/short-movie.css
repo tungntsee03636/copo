@@ -1,0 +1,41 @@
+#short-movie{
+    padding: 68.5px 0 185.5px 0;
+}
+#short-movie .short-movie-list{
+    max-width: 1300px;
+    margin:auto;
+    width: calc(100% - 40px);
+}
+#short-movie .short-movie-list .short-movie-list-inner{
+    row-gap: 95.2px;
+}
+#short-movie .short-movie-list .short-movie-list-inner .short-movie-item{
+    width: 350px;
+}
+
+#short-movie .pagen{
+    margin:100px auto 0 auto;
+    max-width: 378px;
+    display: block;
+}
+
+@media(max-width: 767px){
+    #short-movie .short-movie-list {
+        max-width: 269px;
+    }
+
+    #short-movie .short-movie-list .short-movie-list-inner .short-movie-item{
+        width: 100%;
+    }
+    #short-movie .short-movie-list .short-movie-list-inner{
+        row-gap: 28px;
+    }
+
+    #short-movie{
+        padding: 43px 0 28px 0;
+    }
+    #short-movie .pagen{
+        margin:30px auto 0 auto;
+        max-width: 242px;
+    }
+}
