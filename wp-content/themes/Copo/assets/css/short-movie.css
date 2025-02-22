@@ -14,20 +14,21 @@
 #short-movie .short-movie-list .short-movie-list-inner .short-movie-item{
 }
 
-
+#short-movie .short-movie-list .short-movie-list-inner .short-movie-item .video-wrapper .youtube{
+    border-radius: 10px;
+}
 
 #short-movie .short-movie-list .short-movie-list-inner .short-movie-item .tiktok-embed {
     max-height: 576px;
     border-radius: 10px;
     margin:0;
+    overflow: hidden;
+    max-width: 325px !important;
 }
 #short-movie .short-movie-list .short-movie-list-inner .short-movie-item .tiktok-embed iframe{
-
+    max-width: 325px !important;
 }
 @media(max-width: 767px){
-    #short-movie .short-movie-list {
-        max-width: 269px;
-    }
 
     #short-movie .short-movie-list .short-movie-list-inner .short-movie-item{
         width: 100%;
