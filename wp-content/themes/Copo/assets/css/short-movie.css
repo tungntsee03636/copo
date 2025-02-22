@@ -2,23 +2,28 @@
     padding: 68.5px 0 185.5px 0;
 }
 #short-movie .short-movie-list{
-    max-width: 1300px;
+    max-width: 1000px;
     margin:auto;
     width: calc(100% - 40px);
 }
 #short-movie .short-movie-list .short-movie-list-inner{
-    row-gap: 95.2px;
+    row-gap: 50.2px;
+    justify-content: flex-start;
+    column-gap: 50px;
 }
 #short-movie .short-movie-list .short-movie-list-inner .short-movie-item{
-    width: 350px;
 }
 
-#short-movie .pagen{
-    margin:100px auto 0 auto;
-    max-width: 378px;
-    display: block;
-}
 
+
+#short-movie .short-movie-list .short-movie-list-inner .short-movie-item .tiktok-embed {
+    max-height: 576px;
+    border-radius: 10px;
+    margin:0;
+}
+#short-movie .short-movie-list .short-movie-list-inner .short-movie-item .tiktok-embed iframe{
+
+}
 @media(max-width: 767px){
     #short-movie .short-movie-list {
         max-width: 269px;
@@ -33,9 +38,5 @@
 
     #short-movie{
         padding: 43px 0 28px 0;
-    }
-    #short-movie .pagen{
-        margin:30px auto 0 auto;
-        max-width: 242px;
     }
 }
