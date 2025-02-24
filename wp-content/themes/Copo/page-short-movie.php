@@ -7,7 +7,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 $args = array(
     'post_type'      => 'short-movies',
-    'posts_per_page' => 3, // Số bài viết mỗi trang
+    'posts_per_page' => 6, // Số bài viết mỗi trang
     'paged'          => $paged,
 );
 
