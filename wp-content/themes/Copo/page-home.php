@@ -150,7 +150,8 @@ get_header();
 
             autoplay: {
                 delay: 4000,
-                disableOnInteraction: false
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
             },
 
             pagination: {
@@ -176,7 +177,8 @@ get_header();
 
             autoplay: {
                 delay: 4000,
-                disableOnInteraction: false
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
             },
 
         });
