@@ -25,5 +25,6 @@
 </div>
 
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/assets/js/main.js"></script></main>
+
 </body>
 </html>

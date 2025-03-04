@@ -1,6 +1,7 @@
 jQuery(document).ready(function ($) {
 
 
+
     $(window).on('load', function() {
         console.log("load xong r");
         $(".short-movie-item").each(function () {

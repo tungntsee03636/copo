@@ -1,5 +1,7 @@
 /*SHORT MOVIE LIST*/
-
+#homepage{
+    padding: 68.5px 0 0px 0;
+}
 #homepage .short-movie{
     overflow: hidden;
     padding-bottom: 62.2px;
@@ -116,4 +118,241 @@
 
 #homepage .pickup .pickup-inner{
     padding:50px 0 81px 0;
+}
+
+#homepage .pickup .pickup-inner .logo-list{
+    background:#fff;
+    padding:54px 0 29px 0;
+    margin:46px 0 53px 0;
+}
+
+#homepage .pickup .pickup-inner .logo-list .logo-list-inner{
+    max-width: 1098px;
+    align-items: center;
+    margin:0 auto;
+    row-gap: 10px;
+}
+
+#homepage .pickup .pickup-inner .logo-list .logo-list-inner .logo-item{
+    width: 220px;
+}
+
+
+#homepage .pickup .pickup-inner .company-articles .company-articles-inner{
+    background:transparent !important;
+}
+
+#homepage .pickup .pickup-inner .company-articles .ttl{
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.77;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    margin-bottom:21px;
+}
+
+#homepage .pickup .pickup-inner .company-articles .articles-list .article-item{
+    width: 350px;
+}
+
+
+/*MOVIE&INTERVIEW*/
+#homepage .movies-interviews .movies-interviews-inner{
+    padding:55.6px 0 73.5px 0;
+    background:#fff;
+}
+#homepage .movies-interviews .movies-interviews-inner .single-ttl span{
+    text-align: left !important;
+    padding-left:35.3px;
+}
+
+#homepage .movies-interviews .movies-interviews-inner .company-movie-list{
+    margin-top:95px;
+    padding-bottom: 195px;
+    position: relative;
+}
+#homepage .movies-interviews .movies-interviews-inner .company-movie-list .movie-item{
+   /*width: 444px;*/
+}
+#homepage .movies-interviews .movies-interviews-inner .company-movie-list .movie-item.swiper-slide-active{
+    /*width: 636px;*/
+    margin: 0 124px 0 96px !important;
+}
+#homepage .movies-interviews .movies-interviews-inner .company-movie-list .movie-item img{
+    display: block;
+    transform: scale(1);
+    transition: .2s;
+}
+#homepage .movies-interviews .movies-interviews-inner .company-movie-list .movie-item.swiper-slide-active img{
+    /*width: 636px;*/
+    transform: scale(1.43);
+}
+#homepage .movies-interviews .movies-interviews-inner .company-movie-list .swiper-wrapper{
+    align-items: center;
+    left: -98px;
+}
+#homepage .movies-interviews .movies-interviews-inner .company-movie-list .paginationn .swiper-pagination-bullet{
+    width: 19px;
+    height: 19px;
+    margin: 0 10px;
+    background: #E2E2E2;
+    opacity: 1;
+}
+#homepage .movies-interviews .movies-interviews-inner .company-movie-list .paginationn .swiper-pagination-bullet-active{
+    background: #969696;
+}
+#homepage .movies-interviews .movies-interviews-inner .company-movie-list .paginationn{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 55px;
+}
+
+#homepage .mbutton.trans{
+    color: #fbb03b;
+    background: #fff;
+    border: solid 0.5px #fbb03b;
+}
+#homepage .mbutton.trans svg path{
+    fill:#fbb03b;
+}
+
+#homepage .movies-interviews .movies-interviews-inner .company-interviews{
+    margin-top:72.4px
+}
+
+#homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list{
+    margin-top:47.2px;
+    margin-bottom: 52.3px;
+}
+
+#homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner{
+    padding:0 57px 0 18.7px;
+}
+#homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .interview-item{
+    width: 342.31px;
+}
+#homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .interview-item .interview-item-inner{
+    padding: 15.6px 29.6px 19.8px 30.2px;
+    border-radius: 9.3px;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.1);
+    background-color: #f7f7f7;
+}
+
+#homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .interview-item .avatar{
+    margin:17px 0 15px 0;
+}
+
+#homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .interview-item  .ttl{
+    font-size: 17px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.65;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+}
+
+#homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .interview-item .text{
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    margin:15.2px 0 11.7px 0;
+    overflow-wrap: break-word;
+}
+
+#homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .interview-item .readmore{
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.79;
+    letter-spacing: 0.7px;
+    text-align: center;
+    color: #ffb72d;
+    padding: 9.6px 0px 9.6px 0px;
+    border-radius: 10.7px;
+    border: solid 0.8px #ffb72d;
+    display: block;
+}
+
+#homepage .movies-interviews .movies-interviews-inner .company-interviews .mbutton{
+    margin: 0 57px 0 auto;
+}
+
+#homepage .pickup .pickup-inner .hint h2{
+    font-family: "Bebas Neue", serif;
+    font-size: 108px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+}
+
+#homepage .pickup .pickup-inner .hint h2 img{
+    width: 65px;
+    position: relative;
+    left: -11px;
+    top: -11px;
+}
+
+#homepage .pickup .pickup-inner .hint .subt{
+    font-size: 33px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.73;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    margin:11px 0 9px 0;
+}
+#homepage .pickup .pickup-inner .hint .text{
+    font-size: 23px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.65;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+}
+
+#homepage .pickup.tenshoku .pickup-inner{
+    padding:27.4px 0 35px 0;
+}
+
+#homepage .hint-list{
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    padding: 61px 0 175px 0;
+}
+#homepage .hint-list .hint-list-inner{
+    margin: 0 auto 0 auto;
+    max-width: 1463.5px;
+}
+
+#homepage .hint-list .hint-list-inner .hint-item{
+    width: 336px;
+}
+#homepage .hint-list .mbutton{
+    margin:33.2px 49.7px 0 auto;
+}
+
+#homepage .hint-list .banner-home{
+    margin: 167px auto 0 auto;
+    max-width: 1463.5px;
 }
