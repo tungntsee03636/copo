@@ -1,3 +1,6 @@
+.swiper-wrapper .swiper-slide{
+    user-select: none;
+}
 /*SHORT MOVIE LIST*/
 #homepage{
     padding: 68.5px 0 0px 0;
