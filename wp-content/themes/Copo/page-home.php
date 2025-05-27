@@ -15,50 +15,105 @@ get_header();
                     <span class="en"><small>S</small>hort <small>m</small>ovies</span>
                     <span class="jp">ショート動画</span>
                 </h2>
+                <?php
+                $args = array(
+                    'post_type'      => 'short-movies',
+                    'posts_per_page' => 6,
+                    'paged'          => $paged,
+                );
+                $short_movies = new WP_Query($args);
+                ?>
 <!--                SHORT MOVIE LIST-->
                 <div class="short-movie-list swiper">
                     <div class="swiper-wrapper">
-                        <div class="short-movie-item swiper-slide">
-                            <a href="#">
-                                <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/short01.png" alt="">
-                            </a>
-                        </div>
-                        <div class="short-movie-item swiper-slide">
-                            <a href="#">
-                                <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/short02.png" alt="">
-                            </a>
-                        </div>
-                        <div class="short-movie-item swiper-slide">
-                            <a href="#">
-                                <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/short03.png" alt="">
-                            </a>
-                        </div>
-                        <div class="short-movie-item swiper-slide">
-                            <a href="#">
-                                <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/short04.png" alt="">
-                            </a>
-                        </div>
-                        <div class="short-movie-item swiper-slide">
-                            <a href="#">
-                                <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/short05.png" alt="">
-                            </a>
-                        </div>
-                        <div class="short-movie-item swiper-slide">
-                            <a href="#">
-                                <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/short06.png" alt="">
-                            </a>
-                        </div>
-
-                        <div class="short-movie-item swiper-slide">
-                            <a href="#">
-                                <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/short03.png" alt="">
-                            </a>
-                        </div>
+                        <?php if ($short_movies->have_posts()) : ?>
+                            <?php while ($short_movies->have_posts()) : $short_movies->the_post(); ?>
+                                <?php
+                                $movie_id = get_the_ID();
+                                $thumbnail_url = '';
+                                $is_enviry = 'false';
+                                $video_type = get_field('type_video');
+                                if ($video_type == 'youtube') {
+                                    $short_youtube = get_field('short_youtube');
+                                    if ($short_youtube) {
+                                        parse_str(parse_url($short_youtube, PHP_URL_QUERY), $yt_params);
+                                        $video_id = isset($yt_params['v']) ? $yt_params['v'] : basename(parse_url($short_youtube, PHP_URL_PATH));
+                                        $thumbnail_url = "https://img.youtube.com/vi/$video_id/maxresdefault.jpg";
+                                    }
+                                } elseif ($video_type == 'enviry') {
+                                    $short_enviry = get_field('short_enviry');
+                                    $is_enviry = 'true';
+                                    $thumbnail_url = get_stylesheet_directory_uri() . '/assets/img/phone.png';
+                                }
+                                ?>
+                                <div class="short-movie-item swiper-slide" data-id="<?php echo esc_attr($movie_id); ?>" data-enviry="<?php echo $is_enviry;?>">
+                                    <img class="thumbnail" src="<?php echo esc_url($thumbnail_url); ?>" alt="Thumbnail">
+                                </div>
+                            <?php endwhile; ?>
+                        <?php else : ?>
+                            <p class="novideos">No Videos Available.</p>
+                        <?php endif; ?>
                     </div>
+                    <?php if ($short_movies->have_posts()) : ?>
+                        <?php while ($short_movies->have_posts()) : $short_movies->the_post(); ?>
+                            <?php
+                            $movie_id = get_the_ID();
+                            $movie_title = get_the_title();
+                            $video_embed  = '';
+                            $is_enviry = 'false';
+                            $video_type = get_field('type_video');
+                            if ($video_type == 'youtube') {
+                                $short_youtube = get_field('short_youtube');
+                                if ($short_youtube) {
+                                    parse_str(parse_url($short_youtube, PHP_URL_QUERY), $yt_params);
+                                    $video_id = isset($yt_params['v']) ? $yt_params['v'] : basename(parse_url($short_youtube, PHP_URL_PATH));
+                                    $video_embed = '<iframe width="100%" height="584" src="https://www.youtube.com/embed/' . esc_attr($video_id) . '?playlist=' . esc_attr($video_id) . '" frameborder="0" allowfullscreen></iframe>';
+                                }
+                            } elseif ($video_type == 'enviry') {
+                                $short_enviry = get_field('short_enviry');
+                                $is_enviry = 'true';
+                                if ($short_enviry) {
+                                    $video_embed = $short_enviry;
+                                    $thumbnail_url = get_stylesheet_directory_uri() . '/assets/img/phone.png';
+                                }
+                            }
+                            ?>
+
+                            <!-- Popup Modal -->
+                            <div id="short-movie-popup-<?php echo esc_attr($movie_id); ?>" class="popup">
+                                <div class="popup-content">
+                                    <span class="close-btn">&times;</span>
+
+                                    <div class="popup-movie-text">
+                                        <?php echo $video_embed; ?>
+                                    </div>
+                                    <h3 class="movie-ttl"><?php echo $movie_title; ?></h3>
+                                    <?php if( have_rows('button_list') ): ?>
+                                        <ul class="link-list fl">
+                                            <?php while( have_rows('button_list') ): the_row();
+                                                $label = get_sub_field('label');
+                                                $link = get_sub_field('link');
+                                                ?>
+                                                <li>
+                                                    <a href="<?php echo esc_url($link); ?>" target="_blank">
+                                                        <?php echo esc_html($label); ?>
+                                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/darrowl.png">
+                                                    </a>
+                                                </li>
+                                            <?php endwhile; ?>
+                                        </ul>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php else : ?>
+                        <p class="novideos">No Videos Available.</p>
+                    <?php endif; ?>
                     <span class="swiper-pagination"></span>
                 </div>
+<
 
-                <a href="#" class="mbutton">ショート動画をもっと見る
+                <a href="/short-movie" class="mbutton">ショート動画をもっと見る
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
                         <defs>
                             <clipPath id="clip-path">
@@ -202,30 +257,105 @@ get_header();
                         <span class="jp">動画コンテンツ公開企業</span>
                     </h2>
 
+                    <?php
+                    $args = array(
+                        'post_type'      => 'movies',
+                        'posts_per_page' => 5,
+                        'paged'          => $paged,
+                    );
+                    $movies = new WP_Query($args);
+                    ?>
 
                     <div class="company-movie-list">
                         <div class="swiper-wrapper">
-                            <div class="movie-item swiper-slide">
-                                <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/m1.png" alt="">
-                            </div>
-                            <div class="movie-item swiper-slide">
-                                <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/m2.png" alt="">
-                            </div>
-                            <div class="movie-item swiper-slide">
-                                <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/m3.png" alt="">
-                            </div>
-                            <div class="movie-item swiper-slide">
-                                <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/m4.png" alt="">
-                            </div>
-                            <div class="movie-item swiper-slide">
-                                <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/m5.png" alt="">
-                            </div>
-
+                            <?php if ($movies->have_posts()) : ?>
+                                <?php while ($movies->have_posts()) : $movies->the_post(); ?>
+                                    <?php
+                                    $movie_id = get_the_ID();
+                                    $movie_title = get_the_title();
+                                    $thumbnail_url = '';
+                                    $is_enviry = 'false';
+                                    $video_type = get_field('type_video');
+                                    if ($video_type == 'youtube') {
+                                        $youtube = get_field('youtube');
+                                        if ($youtube) {
+                                            parse_str(parse_url($youtube, PHP_URL_QUERY), $yt_params);
+                                            $video_id = isset($yt_params['v']) ? $yt_params['v'] : basename(parse_url($youtube, PHP_URL_PATH));
+                                            $thumbnail_url = "https://img.youtube.com/vi/$video_id/sddefault.jpg";
+                                        }
+                                    } elseif ($video_type == 'enviry') {
+                                        $enviry = get_field('enviry');
+                                        $is_enviry = 'true';
+                                        $thumbnail_url = "";
+                                    }
+                                    ?>
+                                    <div class="movie-item swiper-slide" data-id="<?php echo esc_attr($movie_id); ?>" data-enviry="<?php echo $is_enviry;?>">
+                                        <img class="thumbnail" src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php echo esc_url($movie_title); ?>">
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php else : ?>
+                                <p class="novideos">No Videos Available.</p>
+                            <?php endif; ?>
                         </div>
                         <span class="paginationn"></span>
-                    </div>
 
-                    <a href="#" class="mbutton trans">ショート動画をもっと見る
+                    </div>
+                    <?php if ($movies->have_posts()) : ?>
+                        <?php while ($movies->have_posts()) : $movies->the_post(); ?>
+                            <?php
+                            $movie_id = get_the_ID();
+                            $movie_title = get_the_title();
+                            $is_enviry = 'false';
+                            $video_type = get_field('type_video');
+                            $video_embed  = '';
+                            if ($video_type == 'youtube') {
+                                $youtube = get_field('youtube');
+                                if ($youtube) {
+                                    parse_str(parse_url($youtube, PHP_URL_QUERY), $yt_params);
+                                    $video_id = isset($yt_params['v']) ? $yt_params['v'] : basename(parse_url($youtube, PHP_URL_PATH));
+                                    $video_embed = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' . esc_attr($video_id) . '?playlist=' . esc_attr($video_id) . '" frameborder="0" allowfullscreen></iframe>';
+
+                                }
+                            } elseif ($video_type == 'enviry') {
+                                $enviry = get_field('enviry');
+                                $is_enviry = 'true';
+                                $video_embed = $enviry;
+                            }
+                            ?>
+                            <!-- Popup Modal -->
+                            <div id="movie-popup-<?php echo esc_attr($movie_id); ?>" class="popup">
+                                <div class="popup-content">
+                                    <span class="close-btn">&times;</span>
+
+                                    <div class="popup-movie-text">
+                                        <?php echo $video_embed; ?>
+                                    </div>
+                                    <h3 class="movie-ttl"><?php echo $movie_title; ?></h3>
+
+                                    <?php if( have_rows('button_list') ): ?>
+                                        <ul class="link-list fl">
+                                            <?php while( have_rows('button_list') ): the_row();
+                                                $label = get_sub_field('label');
+                                                $link = get_sub_field('link');
+                                                ?>
+                                                <li>
+                                                    <a href="<?php echo esc_url($link); ?>" target="_blank">
+                                                        <?php echo esc_html($label); ?>
+                                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/darrowl.png">
+                                                    </a>
+                                                </li>
+                                            <?php endwhile; ?>
+                                        </ul>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php else : ?>
+                        <p class="novideos">No Videos Available.</p>
+                    <?php endif; ?>
+
+
+                    <a href="/movie" class="mbutton trans">ショート動画をもっと見る
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
                             <defs>
                                 <clipPath id="clip-path">
@@ -376,6 +506,7 @@ get_header();
 
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/assets/js/home.js"></script>
     <script>
         const swiper = new Swiper(".short-movie-list", {
             centeredSlides: true,
@@ -391,7 +522,7 @@ get_header();
             },
 
             autoplay: {
-                delay: 4000,
+                delay: 30000,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
             },
@@ -418,7 +549,7 @@ get_header();
             },
 
             autoplay: {
-                delay: 4000,
+                delay: 3000,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
             },
@@ -440,7 +571,7 @@ get_header();
             },
 
             autoplay: {
-                delay: 4000,
+                delay: 30000,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
             },

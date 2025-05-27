@@ -96,7 +96,7 @@
 
 .popup-content {
     width: 80%;
-    max-width: 1209px;
+    max-width: 500px;
     padding: 25px 25px 40px 25px;
     position: absolute;
     top: 50%;
@@ -116,16 +116,18 @@
     letter-spacing: 1.3px;
     text-align: center;
     color: #181818;
-    margin:43px 0 32px 0;
+    margin: 43px 0 25px 0;
 }
 
 .popup-content .link-list{
     max-width: 928px;
-    margin:0px auto 0 auto;
+    margin: 0px auto 0 auto;
+    justify-content: center;
+    gap: 20px;
 }
 
 .popup-content .link-list li a{
-    font-size: 26px;
+    font-size: 22px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -134,7 +136,7 @@
     text-align: center;
     color: #fff;
     display: block;
-    padding: 18.6px 130px 16.4px 130px;
+    padding: 8.6px 66px;
     border-radius: 35px;
     background-image: linear-gradient(to bottom, #000, #505050);
     width: fit-content;
@@ -143,10 +145,10 @@
 
 .popup-content .link-list li a img{
     position: absolute;
-    max-width: 30px;
-    top:50%;
+    max-width: 18px;
+    top: 50%;
     transform: translateY(-50%);
-    right:45.7px;
+    right: 35.7px;
     transition: .3s;
 }
 .popup-content .link-list li a:hover img{

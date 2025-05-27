@@ -44,6 +44,7 @@ $movies = new WP_Query($args);
                             $video_id = isset($yt_params['v']) ? $yt_params['v'] : basename(parse_url($short_youtube, PHP_URL_PATH));
                             $thumbnail_url = "https://img.youtube.com/vi/$video_id/maxresdefault.jpg";
                             $video_embed = '<iframe width="100%" height="584" src="https://www.youtube.com/embed/' . esc_attr($video_id) . '?autoplay=1&mute=1&loop=1&playlist=' . esc_attr($video_id) . '" frameborder="0" allowfullscreen></iframe>';
+                            $video_embed1 = '<iframe width="100%" height="584" src="https://www.youtube.com/embed/' . esc_attr($video_id) . '?playlist=' . esc_attr($video_id) . '" frameborder="0" allowfullscreen></iframe>';
                         }
                     } elseif ($video_type == 'enviry') {
                         $short_enviry = get_field('short_enviry');
@@ -68,13 +69,24 @@ $movies = new WP_Query($args);
                             <span class="close-btn">&times;</span>
 
                             <div class="popup-movie-text">
-                                <?php echo $video_embed; ?>
+                                <?php echo $video_embed1; ?>
                             </div>
                             <h3 class="movie-ttl"><?php echo $movie_title; ?></h3>
-                            <ul class="link-list fl">
-                                <li><a href="#">動画詳細を見る<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/darrowl.png"></a></li>
-                                <li><a href="#">動画詳細を見る<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/darrowl.png"></a></li>
-                            </ul>
+                            <?php if( have_rows('button_list') ): ?>
+                                <ul class="link-list fl">
+                                    <?php while( have_rows('button_list') ): the_row();
+                                        $label = get_sub_field('label');
+                                        $link = get_sub_field('link');
+                                        ?>
+                                        <li>
+                                            <a href="<?php echo esc_url($link); ?>" target="_blank">
+                                                <?php echo esc_html($label); ?>
+                                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/darrowl.png">
+                                            </a>
+                                        </li>
+                                    <?php endwhile; ?>
+                                </ul>
+                            <?php endif; ?>
                         </div>
                     </div>
                 <?php endwhile; ?>

@@ -1,6 +1,4 @@
-.swiper-wrapper .swiper-slide{
-    user-select: none;
-}
+
 /*SHORT MOVIE LIST*/
 #homepage{
     padding: 68.5px 0 0px 0;
@@ -22,6 +20,9 @@
     margin:0 auto;
     border:5px solid #29ABE2;
     top:0;
+    height: 584px;
+    width: 100%;
+    object-fit: cover;
 }
 #homepage .short-movie-list .short-movie-item:before{
     content: "";
@@ -45,10 +46,10 @@
 
 #homepage .short-movie-list .short-movie-item.swiper-slide-active:after{
     content: "";
-    width: 100%;
+    width: 101%;
     background-image: url(../img/bot.png);
     bottom: -34px;
-    left: 50%;
+    left: 49%;
     transform: translateX(-50%);
     position: absolute;
     z-index: 2;
@@ -60,8 +61,9 @@
     position: relative;
     z-index: 2;
     border-radius: 25px 25px 0px 0px;
-    top: -25px;
-    border:none;
+    top: -29px;
+    border: none;
+    left: -2px;
 }
 
 #homepage .short-movie-list .swiper-pagination{
@@ -188,6 +190,9 @@
     display: block;
     transform: scale(1);
     transition: .2s;
+    height: 240px;
+    object-fit: cover;
+    border:2px solid #29ABE2;
 }
 #homepage .movies-interviews .movies-interviews-inner .company-movie-list .movie-item.swiper-slide-active img{
     /*width: 636px;*/
@@ -358,4 +363,116 @@
 #homepage .hint-list .banner-home{
     margin: 167px auto 0 auto;
     max-width: 1463.5px;
+}
+
+
+/* Popup Styles */
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 99;
+}
+
+.popup-content {
+    width: 80%;
+    max-width: 500px;
+    padding: 25px 25px 40px 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.35);
+    background-image: linear-gradient(to bottom, #fff, #ebebeb);
+}
+
+
+.popup-content .movie-ttl{
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.77;
+    letter-spacing: 1.3px;
+    text-align: center;
+    color: #181818;
+    margin: 43px 0 25px 0;
+}
+
+.popup-content .link-list{
+    max-width: 928px;
+    margin: 0px auto 0 auto;
+    justify-content: center;
+    gap: 20px;
+}
+
+.popup-content .link-list li a{
+    font-size: 22px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.77;
+    letter-spacing: 1.3px;
+    text-align: center;
+    color: #fff;
+    display: block;
+    padding: 8.6px 66px;
+    border-radius: 35px;
+    background-image: linear-gradient(to bottom, #000, #505050);
+    width: fit-content;
+    position: relative;
+}
+
+.popup-content .link-list li a img{
+    position: absolute;
+    max-width: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 35.7px;
+    transition: .3s;
+}
+.popup-content .link-list li a:hover img{
+    right:40.7px;
+}
+.close-btn {
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.popup-movie-text {
+    position: relative;
+    /*min-height: 553px;*/
+    padding: 0;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    width: 300px;
+    height: 584px;
+    margin:0 auto 0px auto;
+    /*overflow: hidden;*/
+}
+
+#homepage .movies-interviews .movies-interviews-inner .popup-content{
+    width: 80%;
+    max-width: 1209px;
+    padding: 25px 25px 40px 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.35);
+    background-image: linear-gradient(to bottom, #fff, #ebebeb);
+}
+
+#homepage .movies-interviews .movies-interviews-inner .popup-movie-text{
+    position: relative;
+    /* min-height: 553px; */
+    padding: 30.7px 27.5px 28.5px 28.1px;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    width: unset;
 }

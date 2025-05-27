@@ -14,6 +14,9 @@ body {
     font-family: 'Yu Gothic',sans-serif;
 
 }
+.swiper-wrapper .swiper-slide{
+    user-select: none;
+}
 
 .main-wrap{
     overflow: hidden;
@@ -38,6 +41,11 @@ body::-webkit-scrollbar-thumb:hover{
     background: #a4a4a4;
     border: 3px solid transparent;
     background-clip: content-box;
+}
+
+.no-scroll {
+    /*overflow: hidden;*/
+    /*padding-right: 17px;*/
 }
 p
 {
