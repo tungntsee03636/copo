@@ -522,7 +522,7 @@ get_header();
             },
 
             autoplay: {
-                delay: 30000,
+                delay: 3000,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
             },
@@ -571,7 +571,7 @@ get_header();
             },
 
             autoplay: {
-                delay: 30000,
+                delay: 3000,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
             },
