@@ -30,7 +30,11 @@ get_header();
 
                 <div class="company-box">
                     <h1 class="company-title"><?php the_title(); ?></h1>
-                    <?php the_content(); ?>
+                    <h2 class="part">
+                        <?php echo get_field('part'); ?><br>
+                        <?php echo get_field('address'); ?>
+                    </h2>
+                    <p><?php echo get_field('pr'); ?></p>
                 </div>
 
             </div>

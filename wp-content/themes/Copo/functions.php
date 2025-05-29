@@ -16,5 +16,4 @@ add_action('init', 'setup_vuzic_theme');
 
 
 
-
 ?>
