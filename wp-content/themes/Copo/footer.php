@@ -1,6 +1,5 @@
 
-<?php
-?>
+<?php wp_footer(); ?>
 
 
 <div class="banner-bottom">

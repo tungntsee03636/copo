@@ -5,7 +5,7 @@
     max-width: 1328px;
 }
 #top3 .single-content .content01 h1{
-    margin: 133.2px 0 23px 0;
+    margin: 0px 0 23px 0;
     font-size: 59px;
     line-height: 103px;
 }
@@ -23,7 +23,13 @@
 }
 
 #top3 .single-content .content01 .company-box{
-    padding: 66px 0 72.7px 0;
+    padding: 60px 40px;
+    margin-top: 70px;
+    border: 1px solid #666;
+}
+
+#top3 .single-content .content01 .company-box h2{
+    margin-bottom:66px;
 }
 
 #top3 .calling-list{

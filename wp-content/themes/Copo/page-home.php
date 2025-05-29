@@ -140,18 +140,35 @@ get_header();
                     <span class="en"><small>F</small>ind your calling</span>
                     <span class="jp">特集からお仕事を探す</span>
                 </h2>
+                <?php
 
+                    $args = array(
+                        'post_type' => 'calling',
+                        'posts_per_page' => 6,
+                    );
+
+                    $calling = new WP_Query($args);
+
+                ?>
                 <div class="calling-list">
                     <div class="swiper-wrapper">
+                        <?php
+                        if ($calling->have_posts()) :
+                        while ($calling->have_posts()) : $calling->the_post();
+                        ?>
+
                         <div class="calling-item swiper-slide">
-                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/top3.png" alt="">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail('full'); ?>
+                            </a>
                         </div>
-                        <div class="calling-item swiper-slide">
-                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/top3.png" alt="">
-                        </div>
-                        <div class="calling-item swiper-slide">
-                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/top3.png" alt="">
-                        </div>
+
+                        <?php endwhile;
+                            wp_reset_postdata();
+                        else :
+                            echo '<p>No calling Post</p>';
+                        endif;
+                        ?>
                     </div>
                 </div>
 

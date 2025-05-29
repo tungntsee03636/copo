@@ -14,7 +14,6 @@
 
 add_action('init', 'setup_vuzic_theme');
 
-add_filter('show_admin_bar', '__return_false');
 
 
 
