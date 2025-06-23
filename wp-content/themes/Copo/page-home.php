@@ -111,7 +111,6 @@ get_header();
                     <?php endif; ?>
                     <span class="swiper-pagination"></span>
                 </div>
-<
 
                 <a href="/short-movie" class="mbutton">ショート動画をもっと見る
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
@@ -297,6 +296,7 @@ get_header();
                                         $youtube = get_field('youtube');
                                         if ($youtube) {
                                             parse_str(parse_url($youtube, PHP_URL_QUERY), $yt_params);
+                                            $video_id = isset($yt_params['v']) ? $yt_params['v'] : basename(parse_url($youtube, PHP_URL_PATH));
                                             $video_id = isset($yt_params['v']) ? $yt_params['v'] : basename(parse_url($youtube, PHP_URL_PATH));
                                             $thumbnail_url = "https://img.youtube.com/vi/$video_id/sddefault.jpg";
                                         }
@@ -509,9 +509,10 @@ get_header();
 
             </a>
 
+
             <div class="banner-home">
                     <a class="#">
-                        <picture >
+                        <picture>
                             <source media="(max-width: 767px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/banner-bottom-sp.png 2x">
                             <source media="(min-width: 768px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/tenbanner.png 2x">
                             <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/tenbanner.png" alt="">
@@ -524,89 +525,25 @@ get_header();
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/assets/js/home.js"></script>
-    <script>
-        const swiper = new Swiper(".short-movie-list", {
-            centeredSlides: true,
-            simulateTouch:true,
-            slidesPerView: 4.29,
-            grabCursor: true,
-            freeMode: false,
-            spaceBetween: 55.6,
-            loop: true,
-            mousewheel: false,
-            keyboard: {
-                enabled: true
-            },
 
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            },
-
-            pagination: {
-                el: ".short-movie-list .swiper-pagination",
-                dynamicBullets: false,
-                clickable: true
-            },
-
-        });
-
-        const swiper01 = new Swiper(".calling-list", {
-            centeredSlides: true,
-            simulateTouch:true,
-            slidesPerView: 1.95,
-            grabCursor: true,
-            freeMode: false,
-            spaceBetween: 43.1,
-            loop: true,
-            mousewheel: false,
-            keyboard: {
-                enabled: true
-            },
-
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            },
-
-        });
-
-        const swiper02 = new Swiper(".company-movie-list", {
-            centeredSlides: true,
-            simulateTouch:true,
-            slidesPerView: 3.414,
-            // slidesPerView: "auto",
-            grabCursor: true,
-            freeMode: false,
-            spaceBetween: 24,
-            loop: true,
-            mousewheel: false,
-            keyboard: {
-                enabled: true
-            },
-
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            },
-
-            pagination: {
-                el: ".company-movie-list .paginationn",
-                dynamicBullets: false,
-                clickable: true
-            },
-
-        });
-
-        $(document).ready(function() {
-            if ($("#homepage").length) {
-                $(".banner-bottom").remove();
-            }
-        });
-    </script>
 <?php
 get_footer()
 ?>
+
+
+<div class="banner-text-inner">
+    <p class="subt">
+        <span class="b-color"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">အကယ်၍ သင်သည် ဂျပန်နိုင်ငံတွင် အလုပ်အကိုင်</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ရှာဖွေနေပါက သို့မဟုတ် အလုပ်ပြောင်းရန် သင့် </font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                အလုပ်ရှာဖွေရာတွင် </font></font><span class="o-color"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">သင့်အား ပံ့ပိုးကူညီရန် တစ်စုံတစ်ဦး လိုအပ်</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> မည်ဖြစ်သည် ။
+            </font></font></p>
+    <h1 class="ttl">
+        <span class="o-color"><font style="vertical-align: inherit;"></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">သင်၏ </font><span class="o-color"><font style="vertical-align: inherit;">"မိခင်ဘာသာစကား"</font></span><font style="vertical-align: inherit;"> ဖြင့် </font></font>
+        <span class="b-color"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">သင့်အလုပ်ဆန္ဒများကို</font></font></span><font style="vertical-align: inherit;"></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                ဖြည့်ဆည်းပေးခြင်း
+            </font></font></h1>
+    <p class="nation">
+        <img class="sizes" src="https://mintoku.com/lp/wp-content/themes/minnano/page-template/about_mintokuwork/images/mintoku-lp/flag.png" alt=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                နိုင်ငံပေါင်း 6 နိုင်ငံကျော်ကို ပံ့ပိုးပေးသည်။
+            </font></font></p>
+</div>
+

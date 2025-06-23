@@ -476,3 +476,59 @@
     background-color: #fff;
     width: unset;
 }
+
+
+@media(max-width: 767px){
+    #homepage .short-movie-list .short-movie-item img{
+        height: 430px;
+    }
+    #homepage .short-movie-list .short-movie-item:before {
+        left: 51%;
+        top: 52%;
+    }
+    #homepage .short-movie-list .short-movie-item.swiper-slide-active:before {
+        width: calc(100% + 38px);
+        height: calc(100% + 104px);
+    }
+    #homepage .short-movie-list .short-movie-item.swiper-slide-active:after{
+        width: 103%;
+    }
+    #homepage .short-movie-list .short-movie-item.swiper-slide-active{
+        position: relative;
+        top: -42px;
+    }
+    #homepage .short-movie-list {
+        margin: 90px 0 82px 0;
+    }
+    #homepage {
+        padding: 18px 0 0px 0;
+    }
+    #homepage .short-movie-list .swiper-pagination {
+        bottom: -60px;
+    }
+    #homepage .short-movie-list .swiper-pagination .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        margin: 0 7.5px;
+    }
+    #homepage .mbutton{
+        font-size: 17px;
+        line-height: 31px;
+        padding: 16px 52.3px 17.7px 54.6px;
+    }
+
+    #homepage .mbutton svg{
+        width: 12.59px;
+        margin-left: 13px;
+    }
+    #homepage .short-movie {
+        padding-bottom: 46.2px;
+    }
+
+    #homepage .calling .calling-inner {
+        padding: 36px 0 68px 0;
+    }
+    #homepage .calling .calling-inner .calling-list {
+        margin: 21.4px 0 24.4px 0;
+    }
+}

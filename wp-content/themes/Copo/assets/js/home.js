@@ -35,4 +35,98 @@ jQuery(document).ready(function ($) {
             $('body').removeClass('no-scroll');
         }
     });
+
+    if ($("#homepage").length) {
+        $(".banner-bottom").remove();
+    }
+
+    const swiper = new Swiper(".short-movie-list", {
+        centeredSlides: true,
+        simulateTouch:true,
+        slidesPerView: 1.6,
+        grabCursor: true,
+        freeMode: false,
+        spaceBetween: 35.8,
+        loop: true,
+        mousewheel: false,
+        keyboard: {
+            enabled: true
+        },
+
+        autoplay: {
+            delay: 30000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+
+        pagination: {
+            el: ".short-movie-list .swiper-pagination",
+            dynamicBullets: false,
+            clickable: true
+        },
+
+        breakpoints: {
+            767: {
+                slidesPerView: 4.29,
+                spaceBetween: 55.6,
+            },
+        },
+
+    });
+
+    const swiper01 = new Swiper(".calling-list", {
+        centeredSlides: true,
+        simulateTouch:true,
+        slidesPerView: 1.141,
+        grabCursor: true,
+        freeMode: false,
+        spaceBetween: 14,
+        loop: true,
+        mousewheel: false,
+        keyboard: {
+            enabled: true
+        },
+
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+
+        breakpoints: {
+            767: {
+                slidesPerView: 1.95,
+                spaceBetween: 43.1,
+            },
+        },
+
+    });
+
+    const swiper02 = new Swiper(".company-movie-list", {
+        centeredSlides: true,
+        simulateTouch:true,
+        slidesPerView: 3.414,
+        // slidesPerView: "auto",
+        grabCursor: true,
+        freeMode: false,
+        spaceBetween: 24,
+        loop: true,
+        mousewheel: false,
+        keyboard: {
+            enabled: true
+        },
+
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+
+        pagination: {
+            el: ".company-movie-list .paginationn",
+            dynamicBullets: false,
+            clickable: true
+        },
+
+    });
 });

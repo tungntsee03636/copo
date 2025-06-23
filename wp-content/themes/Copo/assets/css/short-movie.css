@@ -1,5 +1,5 @@
 #short-movie{
-    padding: 68.5px 0 185.5px 0;
+    padding: 80px 0 185.5px 0;
 }
 #short-movie .short-movie-list{
     max-width: 1000px;
@@ -10,6 +10,7 @@
     row-gap: 50.2px;
     justify-content: flex-start;
     column-gap: 50px;
+    margin-top:70px;
 }
 #short-movie .short-movie-list .short-movie-list-inner .short-movie-item{
 }

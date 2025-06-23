@@ -101,8 +101,8 @@ $movies = new WP_Query($args);
                 'total'        => $movies->max_num_pages,
                 'current'      => max(1, get_query_var('paged')),
                 'format'       => '?paged=%#%',
-                'prev_text'    => '« Prev',
-                'next_text'    => 'Next »',
+                'prev_text'    => '<img src="' . get_template_directory_uri() . '/assets/img/next.png" alt="prev" />',
+                'next_text'    => '<img src="' . get_template_directory_uri() . '/assets/img/next.png" alt="Next" />',
             ));
             ?>
         </div>

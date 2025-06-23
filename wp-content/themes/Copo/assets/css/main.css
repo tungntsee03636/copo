@@ -9,8 +9,9 @@ common
 ------------------------------------------------------------*/
 body {
     background-image: url(../img/main-bg.png);
-    background-size: cover;
-    background-position: top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
     font-family: 'Yu Gothic',sans-serif;
 
 }
@@ -170,7 +171,8 @@ picture{
 }
 .single{
     padding: 68.5px 0 49.5px 0;
-    background: #FFFF00;
+    background-image: url(../img/bg-inner.png);
+    background-size: 100% auto;
     border: solid 4px #000;
     border-top: none;
 }
@@ -178,7 +180,9 @@ picture{
     background: #fff;
     overflow: hidden;
 }
-
+.single .single-ttl{
+        /*margin-bottom: 50px;*/
+}
 .single .single-ttl span{
     display: block;
 }
@@ -214,6 +218,7 @@ picture{
     justify-content: center;
     gap: 26.2px;
     overflow: hidden;
+    display: none;
 }
 .single .category-list .category-item a{
     font-size: 20px;
@@ -436,25 +441,44 @@ picture{
     margin: 100px 0 0 0;
     display: flex;
     justify-content: center;
-    column-gap: 42px;
+    column-gap: 19px;
 }
 .pagination .prev, .pagination .next{
-    display: none;
+    border: none;
+    width: unset;
+    height: unset;
 }
+.pagination .prev img, .pagination .next img{
+    width: 15px;
+}
+
+.pagination .prev img{
+    transform: rotate(180deg);
+}
+
 .pagination a, .pagination span {
     text-decoration: none;
-    font-size: 37px;
+    font-size: 23px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.76;
+    line-height: 0.5;
     letter-spacing: normal;
     text-align: center;
-    color: #fbb03b;
+    color: #fff;
+    border: 2px solid #fff;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
 }
 
 .pagination .current {
-    color:#de8700;
+    color: #fff;
+    background: #FF7E00;
+    border: 1px solid #FF7E00;
 }
 
 
