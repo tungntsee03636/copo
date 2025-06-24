@@ -530,20 +530,3 @@ get_header();
 get_footer()
 ?>
 
-
-<div class="banner-text-inner">
-    <p class="subt">
-        <span class="b-color"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">အကယ်၍ သင်သည် ဂျပန်နိုင်ငံတွင် အလုပ်အကိုင်</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ရှာဖွေနေပါက သို့မဟုတ် အလုပ်ပြောင်းရန် သင့် </font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
-                အလုပ်ရှာဖွေရာတွင် </font></font><span class="o-color"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">သင့်အား ပံ့ပိုးကူညီရန် တစ်စုံတစ်ဦး လိုအပ်</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> မည်ဖြစ်သည် ။
-            </font></font></p>
-    <h1 class="ttl">
-        <span class="o-color"><font style="vertical-align: inherit;"></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">သင်၏ </font><span class="o-color"><font style="vertical-align: inherit;">"မိခင်ဘာသာစကား"</font></span><font style="vertical-align: inherit;"> ဖြင့် </font></font>
-        <span class="b-color"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">သင့်အလုပ်ဆန္ဒများကို</font></font></span><font style="vertical-align: inherit;"></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
-                ဖြည့်ဆည်းပေးခြင်း
-            </font></font></h1>
-    <p class="nation">
-        <img class="sizes" src="https://mintoku.com/lp/wp-content/themes/minnano/page-template/about_mintokuwork/images/mintoku-lp/flag.png" alt=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
-                နိုင်ငံပေါင်း 6 နိုင်ငံကျော်ကို ပံ့ပိုးပေးသည်။
-            </font></font></p>
-</div>
-

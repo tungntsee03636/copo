@@ -1,11 +1,16 @@
 
 /*SHORT MOVIE LIST*/
 #homepage{
-    padding: 68.5px 0 0px 0;
+    padding: 0px 0 0px 0;
+    background-image: none;
 }
 #homepage .short-movie{
+    padding-top:68.5px;
     overflow: hidden;
     padding-bottom: 62.2px;
+    background-image: url(../img/bg-inner-1.png);
+    background-size: cover;
+    background-position: center;
 }
 #homepage .short-movie-list{
     margin:100px 0 160px 0;
@@ -92,10 +97,14 @@
     color: #fff;
     width:fit-content;
     padding: 20px 67.2px 21.4px 70.3px;
-    border-radius: 20.3px;
-    background-color: #fbb03b;
+    border-radius: 36px;
+    background-image: linear-gradient(to bottom, #ff4c38, #ff8000);
     display: block;
     margin:0 auto;
+}
+
+#homepage .mbutton svg{
+    margin-left:30px;
 }
 
 /*CALLING*/
@@ -109,16 +118,39 @@
 }
 
 #homepage .calling .calling-inner .calling-list{
-    margin:50px 0 54.5px 0;
+    margin: 145px 0 54.5px 0;
+}
+
+#homepage .calling .calling-inner .calling-list .swiper-wrapper{
+    align-items: flex-end;
+    left: -98px;
+}
+
+
+#homepage .calling .calling-inner .calling-list .calling-item img{
+    transform:scale(1);
+    transform-origin: bottom;
+    box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.16);
+    transition: 0.0s;
+}
+
+#homepage .calling .calling-inner .calling-list .calling-item.swiper-slide-active img{
+    transform:scale(1.317);
+}
+
+#homepage .calling .calling-inner .calling-list .calling-item.swiper-slide-active{
+    margin: 0 130px 0 91px !important;
 }
 
 /*PICKUP*/
 #homepage .pickup{
     width: 100vw;
-    background: #FFE32D;
+    background-image: url(../img/bg-inner-1.png);
+    background-size: cover;
     left: 50%;
     position: relative;
     transform: translateX(-50%);
+    background-position: center;
 }
 
 #homepage .pickup .pickup-inner{
@@ -220,12 +252,12 @@
 }
 
 #homepage .mbutton.trans{
-    color: #fbb03b;
+    color: #FF7E00;
     background: #fff;
-    border: solid 0.5px #fbb03b;
+    border: solid 2px #FF7E00;
 }
 #homepage .mbutton.trans svg path{
-    fill:#fbb03b;
+    fill:#FF7E00;
 }
 
 #homepage .movies-interviews .movies-interviews-inner .company-interviews{

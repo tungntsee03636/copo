@@ -74,6 +74,7 @@ jQuery(document).ready(function ($) {
 
     });
 
+
     const swiper01 = new Swiper(".calling-list", {
         centeredSlides: true,
         simulateTouch:true,
@@ -88,15 +89,15 @@ jQuery(document).ready(function ($) {
         },
 
         autoplay: {
-            delay: 3000,
+            delay: 300000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
         },
 
         breakpoints: {
             767: {
-                slidesPerView: 1.95,
-                spaceBetween: 43.1,
+                slidesPerView: 2.45,
+                spaceBetween: 39,
             },
         },
 
@@ -117,7 +118,7 @@ jQuery(document).ready(function ($) {
         },
 
         autoplay: {
-            delay: 3000,
+            delay: 3000000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
         },
