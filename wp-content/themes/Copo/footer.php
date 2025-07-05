@@ -42,9 +42,9 @@
             <div class="box-right">
                 <ul class="footer-start fl">
                     <li>
-                        <a class="pdl" href="/short-video">ショート動画</a>
+                        <a class="pdl" href="/short-movie">ショート動画</a>
                         <a href="/calling">特集</a>
-                        <a href="/video">採用動画</a>
+                        <a href="/movie">採用動画</a>
                         <a class="pdl" href="/interview">インタビュー記事</a>
                         <a class="pdl" href="/copo-labo">ノウハウ記事</a>
                     </li>
