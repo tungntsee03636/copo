@@ -13,7 +13,7 @@
     background-position: center;
 }
 #homepage .short-movie-list{
-    margin:100px 0 160px 0;
+    margin:80px 0 80px 0;
     overflow: unset;
 }
 #homepage .short-movie-list .swiper-wrapper{
@@ -22,57 +22,107 @@
 
 #homepage .short-movie-list .short-movie-item img{
     display: block;
-    margin:0 auto;
-    border:5px solid #29ABE2;
-    top:0;
+    margin: 0 auto;
+    border: 5px solid #00E8FE;
+    top: 0;
     height: 584px;
     width: 100%;
     object-fit: cover;
 }
-#homepage .short-movie-list .short-movie-item:before{
+#homepage .short-movie-list .short-movie-item .img-box{
+    display: block;
+    position: relative;
+}
+#homepage .short-movie-list .short-movie-item .text-box{
+    margin-top:77.6px;
+    position: relative;
+    min-height: 124px;
+}
+#homepage .short-movie-list .short-movie-item .text-box .title{
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+
+}
+
+#homepage .short-movie-list .short-movie-item.swiper-slide-active .text-box{
+    top: -33.6px;
+}
+
+
+#homepage .short-movie-list .short-movie-item .text-box .company{
+    font-size: 17px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    margin-top:10px;
+}
+
+
+#homepage .short-movie-list .short-movie-item .img-box:before{
     content: "";
     transition: 0.5s;
     opacity: 0;
     transform: translate(-50%, -50%);
     left: 52%;
-    top: 52%;
+    top: 49.7%;
 }
-#homepage .short-movie-list .short-movie-item.swiper-slide-active:before{
+#homepage .short-movie-list .short-movie-item.swiper-slide-active .img-box:before{
     content: "";
     width: calc(100% + 58px);
     background-image: url(../img/phone.png);
-    height: calc(100% + 114px);
-
+    height: calc(100% + 58px);
     z-index: 1;
     position: absolute;
     background-size: 100% 100%;
     opacity: 1;
 }
 
-#homepage .short-movie-list .short-movie-item.swiper-slide-active:after{
+/*#homepage .short-movie-list .short-movie-item.swiper-slide-active:after{*/
+/*    content: "";*/
+/*    width: 101%;*/
+/*    background-image: url(../img/bot.png);*/
+/*    bottom: -34px;*/
+/*    left: 49%;*/
+/*    transform: translateX(-50%);*/
+/*    position: absolute;*/
+/*    z-index: 2;*/
+/*    height: 63px;*/
+/*    background-size: 100% 100%;*/
+/*}*/
+
+#homepage .short-movie-list .short-movie-item.swiper-slide-active .img-box:after{
     content: "";
-    width: 101%;
-    background-image: url(../img/bot.png);
-    bottom: -34px;
-    left: 49%;
-    transform: translateX(-50%);
+    background-image: url(../img/new.png);
+    width: 106px;
+    height: 106px;
+    top: -67px;
+    left: -62px;
     position: absolute;
-    z-index: 2;
-    height: 63px;
-    background-size: 100% 100%;
+    z-index: 1;
 }
 
 #homepage .short-movie-list .short-movie-item.swiper-slide-active img{
     position: relative;
-    z-index: 2;
-    border-radius: 25px 25px 0px 0px;
-    top: -29px;
+    border-radius: 25px;
+    top: -10px;
     border: none;
     left: -2px;
+    height: 654px;
+    z-index: 1;
 }
 
 #homepage .short-movie-list .swiper-pagination{
-    bottom:-124px;
+    bottom:-35px;
 }
 
 #homepage .short-movie-list .swiper-pagination .swiper-pagination-bullet{
@@ -102,9 +152,13 @@
     display: block;
     margin:0 auto;
 }
-
+#homepage .mbutton:hover svg{
+    transform: translateX(10px);
+}
 #homepage .mbutton svg{
     margin-left:30px;
+    transform: translateX(0);
+    transition: .3s;
 }
 
 /*CALLING*/
@@ -198,8 +252,9 @@
 
 /*MOVIE&INTERVIEW*/
 #homepage .movies-interviews .movies-interviews-inner{
-    padding:55.6px 0 73.5px 0;
-    background:#fff;
+    padding: 55.6px 0 73.5px 0;
+    background: #fff;
+    overflow: hidden;
 }
 #homepage .movies-interviews .movies-interviews-inner .single-ttl span{
     text-align: left !important;
@@ -207,31 +262,77 @@
 }
 
 #homepage .movies-interviews .movies-interviews-inner .company-movie-list{
-    margin-top:95px;
-    padding-bottom: 195px;
+    margin-top: 160px;
+    padding-bottom: 260px;
     position: relative;
 }
 #homepage .movies-interviews .movies-interviews-inner .company-movie-list .movie-item{
    /*width: 444px;*/
+    position: relative;
 }
 #homepage .movies-interviews .movies-interviews-inner .company-movie-list .movie-item.swiper-slide-active{
     /*width: 636px;*/
     margin: 0 124px 0 96px !important;
 }
+
+#homepage .movies-interviews .movies-interviews-inner .company-movie-list .movie-item.swiper-slide-active:before{
+    content: "";
+    background-image: url(../img/new.png);
+    width: 106px;
+    height: 106px;
+    top: -139px;
+    left: -141px;
+    position: absolute;
+    z-index: 1;
+}
+
+
 #homepage .movies-interviews .movies-interviews-inner .company-movie-list .movie-item img{
     display: block;
     transform: scale(1);
     transition: .2s;
     height: 240px;
     object-fit: cover;
-    border:2px solid #29ABE2;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16);
 }
 #homepage .movies-interviews .movies-interviews-inner .company-movie-list .movie-item.swiper-slide-active img{
     /*width: 636px;*/
     transform: scale(1.43);
+    transform-origin: bottom;
 }
+#homepage .movies-interviews .movies-interviews-inner .company-movie-list .movie-item .box-text{
+    margin-top: 20px;
+    position: absolute;
+    width: 100%;
+}
+
+#homepage .movies-interviews .movies-interviews-inner .company-movie-list .movie-item .title{
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+}
+
+
+#homepage .movies-interviews .movies-interviews-inner .company-movie-list .movie-item .company{
+    font-size: 17px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    margin-top: 10px;
+}
+
+
 #homepage .movies-interviews .movies-interviews-inner .company-movie-list .swiper-wrapper{
-    align-items: center;
+    align-items: flex-end;
     left: -98px;
 }
 #homepage .movies-interviews .movies-interviews-inner .company-movie-list .paginationn .swiper-pagination-bullet{
@@ -270,24 +371,68 @@
 }
 
 #homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner{
-    padding:0 57px 0 18.7px;
+    max-width: 1494px;
+    margin:0 auto;
+    padding-bottom: 90px;
 }
+
+
+#homepage .hint-list .hint-list-inner .hint-item{
+    position: relative;
+    z-index: 0;
+}
+
+#homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .interview-item:before{
+    content: "";
+    background-image: url(../img/new.png);
+    width: 71px;
+    height: 71px;
+    top: 0px;
+    left: -0;
+    position: absolute;
+    z-index: 1;
+    background-size: cover;
+}
+
 #homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .interview-item{
-    width: 342.31px;
+    position: relative;
+    z-index: 0;
 }
 #homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .interview-item .interview-item-inner{
-    padding: 15.6px 29.6px 19.8px 30.2px;
+    padding: 15.6px 16px 17.8px;
     border-radius: 9.3px;
-    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 10px 10px 0 rgba(0, 0, 0, 0.1);
     background-color: #f7f7f7;
 }
+
+#homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .paginationn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0px;
+}
+
+
+
+#homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .paginationn .swiper-pagination-bullet {
+    width: 19px;
+    height: 19px;
+    margin: 0 10px;
+    background: #E2E2E2;
+    opacity: 1;
+}
+
+#homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .paginationn .swiper-pagination-bullet-active {
+    background: #969696;
+}
+
 
 #homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .interview-item .avatar{
     margin:17px 0 15px 0;
 }
 
 #homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .interview-item  .ttl{
-    font-size: 17px;
+    font-size: 20px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -296,6 +441,27 @@
     text-align: left;
     color: #000;
 }
+
+#homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .interview-item .tag-list{
+    justify-content: flex-start;
+    column-gap: 3px;
+}
+
+#homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .interview-item .tag-list li a{
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.17;
+    letter-spacing: 0.72px;
+    text-align: left;
+    color: #fff;
+    padding: 3px 12px 2px 10px;
+    border-radius: 17px;
+    background-image: linear-gradient(to bottom, #ffaa89, #fea187 18%, #fd9d86 32%, #fb7d81 54%, #f74978);
+}
+
+
 
 #homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .interview-item .text{
     font-size: 18px;
@@ -306,7 +472,7 @@
     letter-spacing: normal;
     text-align: left;
     color: #000;
-    margin:15.2px 0 11.7px 0;
+    margin: 9px 0 5px 0;
     overflow-wrap: break-word;
 }
 
@@ -315,18 +481,19 @@
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.79;
+    line-height: 1;
     letter-spacing: 0.7px;
     text-align: center;
-    color: #ffb72d;
+    color: #FF7E00;
     padding: 9.6px 0px 9.6px 0px;
     border-radius: 10.7px;
-    border: solid 0.8px #ffb72d;
+    border: solid 2px #FF7E00;
     display: block;
 }
 
+
 #homepage .movies-interviews .movies-interviews-inner .company-interviews .mbutton{
-    margin: 0 57px 0 auto;
+    margin: 0 auto 0 auto;
 }
 
 #homepage .pickup .pickup-inner .hint h2{
@@ -339,13 +506,26 @@
     letter-spacing: normal;
     text-align: center;
     color: #000;
+    position: relative;
+    left: 36px;
+}
+
+#homepage .pickup .pickup-inner .hint .note{
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
 }
 
 #homepage .pickup .pickup-inner .hint h2 img{
     width: 65px;
     position: relative;
     left: -11px;
-    top: -11px;
+    top: -4px;
 }
 
 #homepage .pickup .pickup-inner .hint .subt{
@@ -378,23 +558,119 @@
     background: #fff;
     position: relative;
     z-index: 1;
-    padding: 61px 0 175px 0;
+    padding: 61px 0 0px 0;
 }
 #homepage .hint-list .hint-list-inner{
     margin: 0 auto 0 auto;
     max-width: 1463.5px;
+    padding-bottom: 90px;
+}
+
+#homepage .hint-list .hint-list-inner .hint-item .hint-item-inner{
+    padding: 15.6px 16px 17.8px;
+    border-radius: 9.3px;
+    box-shadow: 5px 10px 10px 0 rgba(0, 0, 0, 0.1);
+    background-color: #f7f7f7;
 }
 
 #homepage .hint-list .hint-list-inner .hint-item{
-    width: 336px;
+    position: relative;
+    z-index: 0;
 }
+
+#homepage .hint-list .hint-list-inner .hint-item:before{
+    content: "";
+    background-image: url(../img/new.png);
+    width: 71px;
+    height: 71px;
+    top: 0px;
+    left: -0;
+    position: absolute;
+    z-index: 1;
+    background-size: cover;
+}
+
+#homepage .hint-list .hint-list-inner .paginationn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0px;
+}
+
+#homepage .hint-list .hint-list-inner .paginationn .swiper-pagination-bullet {
+    width: 19px;
+    height: 19px;
+    margin: 0 10px;
+    background: #E2E2E2;
+    opacity: 1;
+}
+
+#homepage .hint-list .hint-list-inner .paginationn .swiper-pagination-bullet-active {
+    background: #969696;
+}
+
+
+#homepage .hint-list .hint-list-inner .hint-item .hint-item-inner .avatar{
+    margin: 17px 0 15px 0;
+}
+
+#homepage .hint-list .hint-list-inner .hint-item .hint-item-inner .tag-list{
+    justify-content: flex-start;
+    column-gap: 3px;
+}
+
+#homepage .hint-list .hint-list-inner .hint-item .hint-item-inner .tag-list li a{
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.17;
+    letter-spacing: 0.72px;
+    text-align: left;
+    color: #fff;
+    padding: 3px 12px 2px 10px;
+    border-radius: 17px;
+    background-image: linear-gradient(to bottom, #ffaa89, #fea187 18%, #fd9d86 32%, #fb7d81 54%, #f74978);
+}
+
+
+#homepage .hint-list .hint-list-inner .hint-item .hint-item-inner .ttl{
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.65;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    margin-bottom: 38px;
+}
+
+#homepage .hint-list .hint-list-inner .hint-item .hint-item-inner .readmore{
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0.7px;
+    text-align: center;
+    color: #FF7E00;
+    padding: 9.6px 0px 9.6px 0px;
+    border-radius: 10.7px;
+    border: solid 2px #FF7E00;
+    display: block;
+}
+
+
+
+
 #homepage .hint-list .mbutton{
-    margin:33.2px 49.7px 0 auto;
+    margin:33.2px auto 0 auto;
 }
 
 #homepage .hint-list .banner-home{
     margin: 167px auto 0 auto;
-    max-width: 1463.5px;
+    max-width: 100%;
 }
 
 
@@ -480,7 +756,7 @@
     position: relative;
     /*min-height: 553px;*/
     padding: 0;
-    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.15);
+    border: 3px solid #00E8FE;
     background-color: #fff;
     width: 300px;
     height: 584px;
@@ -507,6 +783,7 @@
     box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.15);
     background-color: #fff;
     width: unset;
+    border:none;
 }
 
 

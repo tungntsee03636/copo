@@ -54,7 +54,7 @@ jQuery(document).ready(function ($) {
         },
 
         autoplay: {
-            delay: 30000,
+            delay: 3000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
         },
@@ -89,7 +89,7 @@ jQuery(document).ready(function ($) {
         },
 
         autoplay: {
-            delay: 300000,
+            delay: 3000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
         },
@@ -106,7 +106,7 @@ jQuery(document).ready(function ($) {
     const swiper02 = new Swiper(".company-movie-list", {
         centeredSlides: true,
         simulateTouch:true,
-        slidesPerView: 3.414,
+        slidesPerView: 3.5,
         // slidesPerView: "auto",
         grabCursor: true,
         freeMode: false,
@@ -118,7 +118,7 @@ jQuery(document).ready(function ($) {
         },
 
         autoplay: {
-            delay: 3000000,
+            delay: 3000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
         },
@@ -130,4 +130,62 @@ jQuery(document).ready(function ($) {
         },
 
     });
+
+    const interview = new Swiper(".interviews-list-inner", {
+        centeredSlides: false,
+        simulateTouch:true,
+        slidesPerView: 4.05,
+        // slidesPerView: "auto",
+        grabCursor: true,
+        freeMode: false,
+        spaceBetween: 30,
+        loop: true,
+        mousewheel: false,
+        keyboard: {
+            enabled: true
+        },
+
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+
+        pagination: {
+            el: ".interviews-list-inner .paginationn",
+            dynamicBullets: false,
+            clickable: true
+        },
+
+    });
+
+
+    const copo_labo = new Swiper(".hint-list-inner", {
+        centeredSlides: false,
+        simulateTouch:true,
+        slidesPerView: 4.05,
+        // slidesPerView: "auto",
+        grabCursor: true,
+        freeMode: false,
+        spaceBetween: 30,
+        loop: true,
+        mousewheel: false,
+        keyboard: {
+            enabled: true
+        },
+
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+
+        pagination: {
+            el: ".hint-list-inner .paginationn",
+            dynamicBullets: false,
+            clickable: true
+        },
+
+    });
+
 });

@@ -25,11 +25,26 @@
 #top3 .single-content .content01 .company-box{
     padding: 60px 40px;
     margin-top: 70px;
-    border: 1px solid #666;
+    border: 3px solid #FF7E00;
+    border-left: none;
+    border-right: none;
 }
 
 #top3 .single-content .content01 .company-box h2{
     margin-bottom:40px;
+}
+
+#top3 .sub-t{
+    font-size: 46px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    margin-top: 40px;
+    padding-bottom: 30px;
 }
 
 #top3 .calling-list{
@@ -47,12 +62,17 @@
 #top3 .calling-list .calling-item .calling-item-inner{
     align-items: center;
 }
+#top3 .calling-list .calling-item .calling-item-inner .box-logo img{
+    width: 180px;
+    margin: 0 auto;
+    display: block;
+}
 #top3 .calling-list .calling-item .calling-item-inner .box-logo{
-    width:calc(100% - 261px - 520px - 62px);
+    width:calc(100% - 261px - 560px - 62px);
 }
 
 #top3 .calling-list .calling-item .calling-item-inner .box-text{
-    width: 520px;
+    width: 560px;
 }
 #top3 .calling-list .calling-item .calling-item-inner .box-text .tag{
     display: flex;
@@ -92,10 +112,11 @@
     letter-spacing: normal;
     text-align: left;
     color: #242424;
-    margin-bottom:3.2px;
+    margin: 21px 0 11px;
 }
+
 #top3 .calling-list .calling-item .calling-item-inner .box-text .text:last-of-type{
-    margin-bottom:0;
+    margin: 20px 0 0;
 }
 
 #top3 .calling-list .calling-item .calling-item-inner .box-text .text.map img{
@@ -107,7 +128,7 @@
 
 #top3 .calling-list .calling-item .calling-item-inner .box-text .text.map{
     color: #919191;
-    margin-top:13.6px;
+    margin:0px;
 }
 
 #top3 .calling-list .calling-item .calling-item-inner .box-text .ttl{
@@ -155,3 +176,44 @@
     padding: 74px 58.4px 124px 69.4px;
 }
 
+#calling-archive .calling-inner{
+    max-width: 1035px;
+    margin: 80px auto 0;
+}
+
+#calling-archive .calling-inner h1{
+    font-size: 34px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.76;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    margin-bottom: 10px;
+    border-bottom: 3px solid black;
+}
+
+#calling-archive .calling-inner .calling-list{
+    margin-top:28px;
+}
+
+#calling-archive .calling-inner .calling-list .calling-item{
+    width:31.30%;
+}
+
+#calling-archive .calling-inner .calling-list .calling-item h3{
+    font-size: 23px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.3;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    margin-top:10px;
+}
+
+#calling-archive .calling-inner .calling-list .calling-item:hover{
+    opacity: .7;
+}

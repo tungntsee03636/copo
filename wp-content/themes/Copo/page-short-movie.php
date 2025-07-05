@@ -56,11 +56,16 @@ $movies = new WP_Query($args);
                     }
                     ?>
                     <div class="short-movie-item" data-id="<?php echo esc_attr($movie_id); ?>" data-enviry="<?php echo $is_enviry;?>">
-                        <img class="thumbnail" src="<?php echo esc_url($thumbnail_url); ?>" alt="Thumbnail">
-                        <div class="preview-video">
-                            <?php echo $video_embed; ?>
-                            <div class="overlay"></div>
+                        <div class="video-inner">
+                            <img class="thumbnail" src="<?php echo esc_url($thumbnail_url); ?>" alt="Thumbnail">
+                            <div class="preview-video">
+                                <?php echo $video_embed; ?>
+                                <div class="overlay"></div>
+                            </div>
                         </div>
+
+                        <h2 class="video-title"><?php echo $movie_title; ?></h2>
+                        <p class="company"><?php echo get_field("company"); ?></p>
                     </div>
 
                     <!-- Popup Modal -->
@@ -71,7 +76,7 @@ $movies = new WP_Query($args);
                             <div class="popup-movie-text">
                                 <?php echo $video_embed1; ?>
                             </div>
-                            <h3 class="movie-ttl"><?php echo $movie_title; ?></h3>
+                            <h3 class="movie-ttl"><?php echo get_field("company"); ?></h3>
                             <?php if( have_rows('button_list') ): ?>
                                 <ul class="link-list fl">
                                     <?php while( have_rows('button_list') ): the_row();

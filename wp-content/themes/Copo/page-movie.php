@@ -15,8 +15,8 @@ $movies = new WP_Query($args);
 
 <section id="movie" class="single movie inner">
     <h2 class="single-ttl">
-        <span class="en"><small>V</small>iew companies on <small>M</small>OVIES</span>
-        <span class="jp">動画コンテンツ公開企業</span>
+        <span class="en"><small>R</small>ECRUIT <small>M</small>OVIES</span>
+        <span class="jp">採用動画</span>
     </h2>
     <div class="category-list fl">
         <div class="category-item"><a href="#">カテゴリ名</a></div>
@@ -55,6 +55,8 @@ $movies = new WP_Query($args);
                     <div class="movie-item" data-id="<?php echo esc_attr($movie_id); ?>" data-enviry="<?php echo $is_enviry;?>">
                         <img class="thumbnail" src="<?php echo esc_url($thumbnail_url); ?>" alt="Thumbnail">
                         <div class="overlay"></div>
+                        <h2 class="movie-title"><?php echo $movie_title; ?></h2>
+                        <p class="company"><?php echo get_field("company"); ?></p>
                     </div>
 
                     <!-- Popup Modal -->
@@ -65,7 +67,7 @@ $movies = new WP_Query($args);
                             <div class="popup-movie-text">
                                 <?php echo $video_embed; ?>
                             </div>
-                            <h3 class="movie-ttl"><?php echo $movie_title; ?></h3>
+                            <h3 class="movie-ttl"><?php echo get_field("company"); ?></h3>
 
                             <?php if( have_rows('button_list') ): ?>
                                 <ul class="link-list fl">

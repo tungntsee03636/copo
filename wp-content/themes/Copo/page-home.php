@@ -47,7 +47,15 @@ get_header();
                                 }
                                 ?>
                                 <div class="short-movie-item swiper-slide" data-id="<?php echo esc_attr($movie_id); ?>" data-enviry="<?php echo $is_enviry;?>">
-                                    <img class="thumbnail" src="<?php echo esc_url($thumbnail_url); ?>" alt="Thumbnail">
+                                    <div class="img-box">
+                                        <img class="thumbnail" src="<?php echo esc_url($thumbnail_url); ?>" alt="Thumbnail">
+                                    </div>
+
+                                    <div class="text-box">
+                                        <p class="title"><?php echo get_the_title(); ?></p>
+                                        <p class="company"><?php echo get_field("company"); ?></p>
+                                    </div>
+
                                 </div>
                             <?php endwhile; ?>
                         <?php else : ?>
@@ -87,7 +95,7 @@ get_header();
                                     <div class="popup-movie-text">
                                         <?php echo $video_embed; ?>
                                     </div>
-                                    <h3 class="movie-ttl"><?php echo $movie_title; ?></h3>
+                                    <h3 class="movie-ttl"><?php echo get_field("company"); ?></h3>
                                     <?php if( have_rows('button_list') ): ?>
                                         <ul class="link-list fl">
                                             <?php while( have_rows('button_list') ): the_row();
@@ -171,7 +179,7 @@ get_header();
                     </div>
                 </div>
 
-                <a href="#" class="mbutton">ショート動画をもっと見る
+                <a href="/calling" class="mbutton">ショート動画をもっと見る
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
                         <defs>
                             <clipPath id="clip-path">
@@ -308,6 +316,10 @@ get_header();
                                     ?>
                                     <div class="movie-item swiper-slide" data-id="<?php echo esc_attr($movie_id); ?>" data-enviry="<?php echo $is_enviry;?>">
                                         <img class="thumbnail" src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php echo esc_url($movie_title); ?>">
+                                        <div class="box-text">
+                                            <p class="title"><?php echo get_the_title(); ?></p>
+                                            <p class="company"><?php echo get_field("company"); ?></p>
+                                        </div>
                                     </div>
                                 <?php endwhile; ?>
                             <?php else : ?>
@@ -347,7 +359,7 @@ get_header();
                                     <div class="popup-movie-text">
                                         <?php echo $video_embed; ?>
                                     </div>
-                                    <h3 class="movie-ttl"><?php echo $movie_title; ?></h3>
+                                    <h3 class="movie-ttl"><?php echo get_field("company"); ?></h3>
 
                                     <?php if( have_rows('button_list') ): ?>
                                         <ul class="link-list fl">
@@ -397,50 +409,53 @@ get_header();
                         <span class="jp">インタビュー記事で企業を知る</span>
                     </h2>
                     <div class="interviews-list">
-                        <div class="interviews-list-inner fl">
-                            <div class="interview-item">
-                                <div class="interview-item-inner">
-                                    <img class="logo-interview" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo01.png" alt="">
-                                    <img class="avatar" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/avt01.png" alt="">
-                                    <h4 class="ttl">インタビュー記事見出し</h4>
-                                    <p class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-                                    <a class="readmore">READ MORE</a>
-                                </div>
+                        <?php
+
+                        $args = array(
+                            'post_type' => 'interview',
+                            'posts_per_page' => 6,
+                        );
+
+                        $interview = new WP_Query($args);
+
+                        ?>
+
+                        <div class="interviews-list-inner swiper">
+                            <div class="swiper-wrapper">
+                                <?php
+                                if ($interview->have_posts()) :
+                                    while ($interview->have_posts()) : $interview->the_post();
+                                        ?>
+
+                                        <div class="interview-item swiper-slide">
+                                            <div class="interview-item-inner">
+                                                <div class="avatar">
+                                                    <?php the_post_thumbnail('full'); ?>
+                                                </div>
+                                                <ul class="tag-list fl">
+                                                    <li><a href="#">東京都</a></li>
+                                                    <li><a href="#">運送</a></li>
+                                                    <li><a href="#">正社員</a></li>
+                                                </ul>
+                                                <h4 class="ttl"><?php echo get_the_title(); ?></h4>
+                                                <p class="text"><?php echo get_field('company_name'); ?></p>
+                                                <a class="readmore" href="<?php echo get_permalink(); ?>">READ MORE</a>
+                                            </div>
+                                        </div>
+
+                                    <?php endwhile;
+                                    wp_reset_postdata();
+                                else :
+                                    echo '<p>No interview Post</p>';
+                                endif;
+                                ?>
                             </div>
 
-                            <div class="interview-item">
-                                <div class="interview-item-inner">
-                                    <img class="logo-interview" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo02.png" alt="">
-                                    <img class="avatar" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/avt02.png" alt="">
-                                    <h4 class="ttl">インタビュー記事見出し</h4>
-                                    <p class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-                                    <a class="readmore">READ MORE</a>
-                                </div>
-                            </div>
-
-                            <div class="interview-item">
-                                <div class="interview-item-inner">
-                                    <img class="logo-interview" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo03.png" alt="">
-                                    <img class="avatar" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/avt03.png" alt="">
-                                    <h4 class="ttl">インタビュー記事見出し</h4>
-                                    <p class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-                                    <a class="readmore">READ MORE</a>
-                                </div>
-                            </div>
-
-                            <div class="interview-item">
-                                <div class="interview-item-inner">
-                                    <img class="logo-interview" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo04.png" alt="">
-                                    <img class="avatar" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/avt04.png" alt="">
-                                    <h4 class="ttl">インタビュー記事見出し</h4>
-                                    <p class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-                                    <a class="readmore">READ MORE</a>
-                                </div>
-                            </div>
+                            <span class="paginationn"></span>
                         </div>
                     </div>
 
-                    <a href="#" class="mbutton trans">ショート動画をもっと見る
+                    <a href="/interview" class="mbutton trans">ショート動画をもっと見る
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
                             <defs>
                                 <clipPath id="clip-path">
@@ -463,36 +478,62 @@ get_header();
         <section class="pickup tenshoku">
             <div class="pickup-inner">
                 <div class="hint">
-                    <h2>TENSHOKU HINT
+                    <h2>COPO LABO
                         <img class="avatar" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/lamp.png" alt="">
                     </h2>
-                    <p class="subt">～転職・就職応援マガジン～</p>
-                    <p class="text">全国各地のお仕事の最新情報を伝える、転職サイトtenichiの求人紹介メディア</p>
+                    <p class="note">コポラボ</p>
+                    <p class="subt">～仕事選びの新しい視点と、役立つ情報を発信～</p>
                 </div>
             </div>
 
         </section>
 
         <div class="hint-list">
-            <div class="hint-list-inner fl">
-                <div class="hint-item">
-                    <img class="avatar" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/hint01.png" alt="">
+            <?php
+
+            $args = array(
+                'post_type' => 'copo-labo',
+                'posts_per_page' => 6,
+            );
+
+            $hint = new WP_Query($args);
+
+            ?>
+
+            <div class="hint-list-inner swiper">
+                <div class="swiper-wrapper">
+                    <?php
+                    if ($hint->have_posts()) :
+                        while ($hint->have_posts()) : $hint->the_post();
+                            ?>
+
+                            <div class="hint-item swiper-slide">
+                                <div class="hint-item-inner">
+                                    <div class="avatar">
+                                        <?php the_post_thumbnail('full'); ?>
+                                    </div>
+                                    <ul class="tag-list fl">
+                                        <li><a href="#">東京都</a></li>
+                                        <li><a href="#">運送</a></li>
+                                        <li><a href="#">正社員</a></li>
+                                    </ul>
+                                    <h4 class="ttl"><?php echo get_the_title(); ?></h4>
+                                    <a class="readmore" href="<?php echo get_permalink(); ?>">READ MORE</a>
+                                </div>
+                            </div>
+
+                        <?php endwhile;
+                        wp_reset_postdata();
+                    else :
+                        echo '<p>No interview Post</p>';
+                    endif;
+                    ?>
                 </div>
 
-                <div class="hint-item">
-                    <img class="avatar" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/hint02.png" alt="">
-                </div>
-
-                <div class="hint-item">
-                    <img class="avatar" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/hint03.png" alt="">
-                </div>
-
-                <div class="hint-item">
-                    <img class="avatar" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/hint04.png" alt="">
-                </div>
+                <span class="paginationn"></span>
             </div>
 
-            <a href="#" class="mbutton trans">ショート動画をもっと見る
+            <a href="/copo-labo" class="mbutton trans">ショート動画をもっと見る
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
                     <defs>
                         <clipPath id="clip-path">

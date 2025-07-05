@@ -8,9 +8,12 @@ get_header();
 
     <section id="top3" class="single top3 inner">
         <h2 class="single-ttl">
-            <span class="en"><small>F</small>ind your calling</span>
+            <span class="en"><small>F</small>ind <small>Y</small>our <small>C</small>alling</span>
             <span class="jp">特集からお仕事を探す</span>
         </h2>
+
+        <h3 class="sub-t"><?php echo get_field('name'); ?></h3>
+
 
         <div class="category-list fl">
             <div class="category-item"><a href="#">カテゴリ名</a></div>
@@ -41,65 +44,40 @@ get_header();
 
             <div class="calling-list">
                 <div class="calling-item js-fadein">
-                    <p class="label">応募受付中</p>
+<!--                    <p class="label">応募受付中</p>-->
                     <div class="calling-item-inner fl">
                         <div class="box-logo">
                             <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/toyota.png" alt="">
                         </div>
                         <div class="box-text">
-                            <ul class="tag">
-                                <li>スペシャルメッセージ</li>
-                                <li>動画</li>
-                            </ul>
-                            <h3 class="ttl">株式会社XXXXXXX</h3>
-                            <p class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-                            <p class="text map"><span> <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/mappen.png" alt=""></span>XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-                            <p class="text phone">000-0000-0000</p>
-                            <p class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+<!--                            <ul class="tag">-->
+<!--                                <li>スペシャルメッセージ</li>-->
+<!--                                <li>動画</li>-->
+<!--                            </ul>-->
+                            <h3 class="ttl">株式会社エヌデーシー</h3>
+                            <p class="text">自動車部品製造業</p>
+                            <p class="text map"><span> <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/mappen.png" alt=""></span>千葉県習志野市実籾2-39-1</p>
+<!--                            <p class="text phone">000-0000-0000</p>-->
+                            <p class="text">ワーク・ライフ・バランスに力を入れている企業として、「“社員いきいき!元気な会社”宣言企業」に登録！”ものづくり”に興味のある方、自動車業界を一緒に支えていきませんか？</p>
                         </div>
                         <div class="box-img">
                             <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/callimg.png" alt="">
                         </div>
                     </div>
                 </div>
+
                 <div class="calling-item js-fadein">
-                    <p class="label">応募受付中</p>
+                    <!--                    <p class="label">応募受付中</p>-->
                     <div class="calling-item-inner fl">
                         <div class="box-logo">
                             <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/toyota.png" alt="">
                         </div>
                         <div class="box-text">
-                            <ul class="tag">
-                                <li>スペシャルメッセージ</li>
-                                <li>動画</li>
-                            </ul>
-                            <h3 class="ttl">株式会社XXXXXXX</h3>
-                            <p class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-                            <p class="text map"><span> <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/mappen.png" alt=""></span>XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-                            <p class="text phone">000-0000-0000</p>
-                            <p class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-                        </div>
-                        <div class="box-img">
-                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/callimg.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="calling-item js-fadein">
-                    <p class="label">応募受付中</p>
-                    <div class="calling-item-inner fl">
-                        <div class="box-logo">
-                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/toyota.png" alt="">
-                        </div>
-                        <div class="box-text">
-                            <ul class="tag">
-                                <li>スペシャルメッセージ</li>
-                                <li>動画</li>
-                            </ul>
-                            <h3 class="ttl">株式会社XXXXXXX</h3>
-                            <p class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-                            <p class="text map"><span> <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/mappen.png" alt=""></span>XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-                            <p class="text phone">000-0000-0000</p>
-                            <p class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                            <h3 class="ttl">株式会社エヌデーシー</h3>
+                            <p class="text">ミネラルウォーター、茶系飲料、炭酸飲料、<br>茶葉製品等の製造・販売及び付帯する業務</p>
+                            <p class="text map"><span> <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/mappen.png" alt=""></span>大阪府大阪市北区梅田3丁目3-10 梅田ダイビル10階</p>
+                            <!--                            <p class="text phone">000-0000-0000</p>-->
+                            <p class="text">ワーク・ライフ・バランスに力を入れている企業として、「“社員いきいき!元気な会社”宣言企業」に登録！”ものづくり”に興味のある方、自動車業界を一緒に支えていきませんか？</p>
                         </div>
                         <div class="box-img">
                             <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/callimg.png" alt="">
