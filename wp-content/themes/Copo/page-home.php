@@ -120,7 +120,7 @@ get_header();
                     <span class="swiper-pagination"></span>
                 </div>
 
-                <a href="/short-movie" class="mbutton">特集をもっと見る
+                <a href="/short-movie" class="mbutton">ショート動画をもっと見る
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
                         <defs>
                             <clipPath id="clip-path">
