@@ -525,7 +525,6 @@ picture{
 }
 
 .footer .footer-inner .box-right{
-    width: 531px;
 }
 .footer .footer-inner a{
     font-size: 23px;
@@ -566,7 +565,7 @@ picture{
     column-gap: 179px;
     justify-content: flex-start;
     position: relative;
-    right: 194px;
+    right: 160px;
 }
 
 .footer .footer-inner .footer-end{
