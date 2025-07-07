@@ -50,7 +50,7 @@
                     </li>
 
                     <li>
-                        <a class="pdl" href="#">ショート動画</a>
+                        <a class="pdl" href="#">運営会社について</a>
                         <a href="#">運営会社</a>
                         <a href="#">tenichi</a>
                     </li>
@@ -59,7 +59,7 @@
         </div>
 
         <div class="footer-end">
-            <a class="pdl" href="#">ショート動画</a>
+            <a class="pdl" href="#">プライバシーポリシー</a>
             <p class="copyright">© All Rights Reserved. TENSHOKU ICHIBA INC.</p>
         </div>
     </div>

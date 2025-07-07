@@ -120,7 +120,7 @@ get_header();
                     <span class="swiper-pagination"></span>
                 </div>
 
-                <a href="/short-movie" class="mbutton">ショート動画をもっと見る
+                <a href="/short-movie" class="mbutton">特集をもっと見る
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
                         <defs>
                             <clipPath id="clip-path">
@@ -179,7 +179,7 @@ get_header();
                     </div>
                 </div>
 
-                <a href="/calling" class="mbutton">ショート動画をもっと見る
+                <a href="/calling" class="mbutton">特集をもっと見る
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
                         <defs>
                             <clipPath id="clip-path">
@@ -277,8 +277,8 @@ get_header();
             <div class="movies-interviews-inner">
                 <div class="company-movies">
                     <h2 class="single-ttl">
-                        <span class="en"><small>V</small>iew companies on <small>M</small>OVIES</span>
-                        <span class="jp">動画コンテンツ公開企業</span>
+                        <span class="en"><small>R</small>ECRUIT <small>M</small>OVIES</span>
+                        <span class="jp">採用動画</span>
                     </h2>
 
                     <?php
@@ -384,7 +384,7 @@ get_header();
                     <?php endif; ?>
 
 
-                    <a href="/movie" class="mbutton trans">ショート動画をもっと見る
+                    <a href="/movie" class="mbutton trans">特集をもっと見る
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
                             <defs>
                                 <clipPath id="clip-path">
@@ -455,7 +455,7 @@ get_header();
                         </div>
                     </div>
 
-                    <a href="/interview" class="mbutton trans">ショート動画をもっと見る
+                    <a href="/interview" class="mbutton trans">特集をもっと見る
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
                             <defs>
                                 <clipPath id="clip-path">
@@ -533,7 +533,7 @@ get_header();
                 <span class="paginationn"></span>
             </div>
 
-            <a href="/copo-labo" class="mbutton trans">ショート動画をもっと見る
+            <a href="/copo-labo" class="mbutton trans">特集をもっと見る
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
                     <defs>
                         <clipPath id="clip-path">
