@@ -384,7 +384,8 @@ get_header();
                     <?php endif; ?>
 
 
-                    <a href="/movie" class="mbutton trans">特集をもっと見る
+                    <a href="/movie" class="mbutton trans">採用動画をもっと見る
+
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
                             <defs>
                                 <clipPath id="clip-path">
@@ -455,7 +456,7 @@ get_header();
                         </div>
                     </div>
 
-                    <a href="/interview" class="mbutton trans">特集をもっと見る
+                    <a href="/interview" class="mbutton trans">インタビュー記事をもっと見る
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
                             <defs>
                                 <clipPath id="clip-path">
@@ -533,7 +534,7 @@ get_header();
                 <span class="paginationn"></span>
             </div>
 
-            <a href="/copo-labo" class="mbutton trans">特集をもっと見る
+            <a href="/copo-labo" class="mbutton trans">ノウハウ記事をもっと見る
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
                     <defs>
                         <clipPath id="clip-path">
