@@ -72,7 +72,6 @@ $movies = new WP_Query($args);
                     <div id="movie-popup-<?php echo esc_attr($movie_id); ?>" class="popup">
                         <div class="popup-content">
                             <span class="close-btn">&times;</span>
-
                             <div class="popup-movie-text">
                                 <?php echo $video_embed1; ?>
                             </div>

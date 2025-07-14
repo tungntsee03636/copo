@@ -78,7 +78,7 @@ jQuery(document).ready(function ($) {
     const swiper01 = new Swiper(".calling-list", {
         centeredSlides: true,
         simulateTouch:true,
-        slidesPerView: 1.141,
+        slidesPerView: 1.241,
         grabCursor: true,
         freeMode: false,
         spaceBetween: 14,
@@ -89,7 +89,7 @@ jQuery(document).ready(function ($) {
         },
 
         autoplay: {
-            delay: 3000,
+            delay: 3000000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
         },
@@ -106,11 +106,11 @@ jQuery(document).ready(function ($) {
     const swiper02 = new Swiper(".company-movie-list", {
         centeredSlides: true,
         simulateTouch:true,
-        slidesPerView: 3.5,
+        slidesPerView: 1.12,
         // slidesPerView: "auto",
         grabCursor: true,
         freeMode: false,
-        spaceBetween: 24,
+        spaceBetween: 14,
         loop: true,
         mousewheel: false,
         keyboard: {
@@ -118,7 +118,7 @@ jQuery(document).ready(function ($) {
         },
 
         autoplay: {
-            delay: 3000,
+            delay: 300000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
         },
@@ -129,20 +129,35 @@ jQuery(document).ready(function ($) {
             clickable: true
         },
 
+        breakpoints: {
+            767: {
+                slidesPerView: 3.5,
+                spaceBetween: 24,
+            },
+        },
+
     });
 
     const interview = new Swiper(".interviews-list-inner", {
-        centeredSlides: false,
+        centeredSlides: true,
         simulateTouch:true,
-        slidesPerView: 4.05,
+        slidesPerView: 1.2,
         // slidesPerView: "auto",
         grabCursor: true,
         freeMode: false,
-        spaceBetween: 30,
+        spaceBetween: 40,
         loop: true,
         mousewheel: false,
         keyboard: {
             enabled: true
+        },
+
+        breakpoints: {
+            767: {
+                centeredSlides: false,
+                slidesPerView: 4.05,
+                spaceBetween: 30,
+            },
         },
 
         autoplay: {
@@ -161,17 +176,25 @@ jQuery(document).ready(function ($) {
 
 
     const copo_labo = new Swiper(".hint-list-inner", {
-        centeredSlides: false,
+        centeredSlides: true,
         simulateTouch:true,
-        slidesPerView: 4.05,
+        slidesPerView: 1.2,
         // slidesPerView: "auto",
         grabCursor: true,
         freeMode: false,
-        spaceBetween: 30,
+        spaceBetween: 40,
         loop: true,
         mousewheel: false,
         keyboard: {
             enabled: true
+        },
+
+        breakpoints: {
+            767: {
+                centeredSlides: false,
+                slidesPerView: 4.05,
+                spaceBetween: 30,
+            },
         },
 
         autoplay: {

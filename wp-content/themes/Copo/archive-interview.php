@@ -39,7 +39,7 @@ get_header();
                                         <li><a href="#">運送</a></li>
                                         <li><a href="#">正社員</a></li>
                                     </ul>
-                                    <h3><?php echo get_the_title(); ?></h3>
+                                    <a href="<?php the_permalink(); ?>"><h3><?php echo get_the_title(); ?></h3></a>
                                     <p class="time-stamp"><?php echo get_the_date(); ?></p>
                                     <p class="company-name"><?php echo get_field('company_name'); ?></p>
                                 </div>

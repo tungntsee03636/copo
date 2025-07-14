@@ -60,7 +60,7 @@
 
         <div class="footer-end">
             <a class="pdl" href="#">プライバシーポリシー</a>
-            <p class="copyright">© All Rights Reserved. TENSHOKU ICHIBA INC.</p>
+            <p class="copyright">© All Rights Reserved.<br class="sp-br"> TENSHOKU ICHIBA INC.</p>
         </div>
     </div>
 </div>

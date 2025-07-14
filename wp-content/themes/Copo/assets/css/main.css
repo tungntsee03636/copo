@@ -908,4 +908,50 @@ picture{
 
 }
 
+@media (max-width: 767px) {
+    .footer .footer-inner {
+        padding: 40px 30px 40px;
+    }
+    .footer .footer-inner .box-left .footer-logo {
+        width: 220px;
+        margin: 0 auto;
+        display: block;
+    }
+    .footer .footer-inner .box-left .mbutton {
+        font-size: 16px;
+        margin: 20px auto 0;
+    }
+
+    .footer .footer-inner .box-left .mbutton svg {
+        margin-left: 16px;
+    }
+
+    .footer .footer-inner .footer-start {
+        column-gap: 179px;
+        justify-content: flex-start;
+        position: relative;
+         right: 0px;
+        row-gap: 40px;
+    }
+
+    .footer .footer-inner .box-right {
+        margin-top: 40px;
+    }
+
+    .footer .footer-inner a {
+        font-size: 15px;
+    }
+    .footer .footer-inner .box-right ul li a.pdl {
+        padding-left: 0;
+    }
+    .footer .footer-inner .footer-end a {
+        padding-left: 0;
+        margin-bottom: 48px;
+    }
+    .footer .footer-inner .footer-end {
+        width: auto;
+        margin: 15px 0 0 auto;
+    }
+}
+
 

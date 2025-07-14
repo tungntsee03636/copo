@@ -99,8 +99,6 @@ $movies = new WP_Query($args);
             <p class="novideos">No Videos Available.</p>
         <?php endif; ?>
 
-
-
     </div>
     <div class="pagination">
         <?php
