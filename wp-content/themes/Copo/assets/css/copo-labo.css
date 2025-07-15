@@ -185,3 +185,103 @@
     justify-content: center;
     column-gap: 19px;
 }
+
+@media (max-width: 767px) {
+    #copo-labo-archive .labo-list .labo-item .labo-item-inner .box-img {
+        width: 100%;
+    }
+
+    #copo-labo-archive .labo-list .labo-item .labo-item-inner .box-text {
+        width: 100%;
+        position: relative;
+        z-index: 0;
+    }
+
+    #copo-labo-archive .labo-inner {
+        margin: 40px auto 0;
+    }
+
+    #copo-labo-archive .labo-inner h1 {
+        font-size: 26px;
+    }
+
+    #copo-labo-archive .labo-inner{
+        padding: 0 20px;
+    }
+
+    #copo-labo-archive .tag-list li a{
+        padding: 1px 15px 0px 15px;
+        font-size: 16px;
+    }
+
+    #copo-labo-archive .labo-list .labo-item .labo-item-inner .box-text .tag-list{
+        margin-top: 20px;
+    }
+    #copo-labo-archive .labo-list .labo-item .labo-item-inner .box-text h3 {
+        font-size: 20px;
+    }
+
+    #copo-labo-archive .labo-list .labo-item .labo-item-inner .box-text .time-stamp {
+        font-size: 15px;
+        position: relative;
+    }
+
+    #copo-labo-archive .labo-list .labo-item .labo-item-inner .box-text .company-name {
+        font-size: 19px;
+        margin-top: 6px;
+    }
+    #copo-labo-archive .labo-list .labo-item .labo-item-inner .box-text .tag-list {
+        column-gap: 10px;
+    }
+
+
+
+    #copo-labo .single-content{
+        padding: 40.5px 20px 56.5px;
+    }
+
+    .tag-list li a{
+        font-size: 15px;
+        padding: 5px 12px 5.9px;
+    }
+
+    .time-stamp{
+        width: 100%;
+    }
+
+    #copo-labo .single-content h1 {
+        font-size: 29px;
+        margin-bottom: 30px;
+    }
+
+    #copo-labo .single-content .feature-img {
+        margin-bottom: 40px;
+    }
+
+    .single #table-of-contents strong {
+        font-size: 20px;
+    }
+    .single #table-of-contents ul li a{
+        font-size: 15px;
+    }
+    .single #table-of-contents{
+        padding: 20px 20px;
+    }
+    #copo-labo .single-content .post-content h2 {
+        font-size: 27px;
+        padding-top: 35px;
+    }
+
+    #copo-labo .single-content .post-content p {
+        font-size: 16px;
+    }
+
+    #copo-labo .single-content .post-content img{
+        margin: 40px 0 20px;
+    }
+
+    #copo-labo .single-content .post-content h2:before{
+        bottom:unset;
+        top: 44px;
+    }
+}

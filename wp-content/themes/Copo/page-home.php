@@ -431,14 +431,16 @@ get_header();
                                         <div class="interview-item swiper-slide">
                                             <div class="interview-item-inner">
                                                 <div class="avatar">
+                                                    <a href="<?php the_permalink(); ?>">
                                                     <?php the_post_thumbnail('full'); ?>
+                                                    </a>
                                                 </div>
                                                 <ul class="tag-list fl">
                                                     <li><a href="#">東京都</a></li>
                                                     <li><a href="#">運送</a></li>
                                                     <li><a href="#">正社員</a></li>
                                                 </ul>
-                                                <h4 class="ttl"><?php echo get_the_title(); ?></h4>
+                                                <a href="<?php the_permalink(); ?>"><h4 class="ttl"><?php echo get_the_title(); ?></h4></a>
                                                 <p class="text"><?php echo get_field('company_name'); ?></p>
                                                 <a class="readmore" href="<?php echo get_permalink(); ?>">READ MORE</a>
                                             </div>
@@ -511,14 +513,14 @@ get_header();
                             <div class="hint-item swiper-slide">
                                 <div class="hint-item-inner">
                                     <div class="avatar">
-                                        <?php the_post_thumbnail('full'); ?>
+                                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>
                                     </div>
                                     <ul class="tag-list fl">
                                         <li><a href="#">東京都</a></li>
                                         <li><a href="#">運送</a></li>
                                         <li><a href="#">正社員</a></li>
                                     </ul>
-                                    <h4 class="ttl"><?php echo get_the_title(); ?></h4>
+                                    <a href="<?php the_permalink(); ?>"><h4 class="ttl"><?php echo get_the_title(); ?></h4></a>
                                     <a class="readmore" href="<?php echo get_permalink(); ?>">READ MORE</a>
                                 </div>
                             </div>

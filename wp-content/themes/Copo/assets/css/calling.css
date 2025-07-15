@@ -217,3 +217,116 @@
 #calling-archive .calling-inner .calling-list .calling-item:hover{
     opacity: .7;
 }
+
+@media(max-width: 767px){
+    #calling-archive{
+        padding: 42px 0 42px 0;
+    }
+    #calling-archive .calling-inner {
+        padding:0 20px;
+        margin: 40px auto 0;
+    }
+
+    #calling-archive .calling-inner h1 {
+        font-size: 25px;
+        border-bottom: 2px solid black;
+    }
+
+    #calling-archive .calling-inner .calling-list .calling-item {
+        width: 100%;
+    }
+    #calling-archive .calling-inner .calling-list .calling-item h3 {
+        font-size: 19px;
+    }
+    #calling-archive .calling-inner .calling-list {
+        row-gap: 30px;
+    }
+    #top3 .sub-t {
+        font-size: 25px;
+        margin-top: 40px;
+        padding-bottom: 0px;
+    }
+    #top3 .single-content{
+        margin-top: 40px;
+    }
+
+    #top3 .single-content {
+        padding: 40px 20px 40px;
+    }
+
+    #top3 .single-content .content01 .company-box {
+        padding: 40px 0px;
+        margin-top: 40px;
+    }
+
+    #top3 .single-content .content01 h1 {
+        margin: 0px 0 10px 0;
+        font-size: 33px;
+        line-height: 1.5;
+    }
+
+    #top3 .single-content .content01 h2{
+        font-size: 21px;
+        line-height: 2;
+        margin-bottom: 30px;
+    }
+
+    .single .single-content .content01 .company-box p{
+        font-size: 17px;
+        padding: 0px;
+    }
+
+    #top3 .calling-list {
+        margin: 40px auto 0 auto;
+    }
+
+    #top3 .calling-list .calling-item .calling-item-inner .box-logo {
+        width: 100%;
+    }
+
+    #top3 .calling-list .calling-item .calling-item-inner .box-text {
+        width: 100%;
+    }
+
+    #top3 .calling-list .calling-item .calling-item-inner .box-img {
+        width: 100%;
+    }
+
+    #top3 .calling-list .calling-item {
+        padding: 35px 20px 40px;
+        border-radius: 20px;
+        border: solid 3px #e0e0e0;
+    }
+
+    #top3 .calling-list .calling-item .calling-item-inner .box-text .text{
+        font-size: 19px;
+        margin: 21px 0 11px;
+    }
+
+    #top3 .calling-list .calling-item .calling-item-inner .box-text .text {
+        font-size: 14px;
+    }
+
+    #top3 .calling-list .calling-item .calling-item-inner .box-text .text.map img {
+        width: 15px;
+        top: -3px;
+    }
+
+    #top3 .calling-list .calling-item .calling-item-inner .box-text .ttl {
+        font-size: 26px;
+        margin-top:0;
+    }
+
+    #top3 .calling-list .calling-item .calling-item-inner .box-text .text{
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    #top3 .calling-list .calling-item .calling-item-inner {
+        row-gap: 30px;
+    }
+
+    #top3 .calling-list .calling-item .calling-item-inner .box-logo img {
+        width: 150px;
+    }
+}

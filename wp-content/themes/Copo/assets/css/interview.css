@@ -297,3 +297,142 @@
     justify-content: center;
     column-gap: 19px;
 }
+
+@media (max-width: 767px) {
+    #interview-archive .labo-list .labo-item .labo-item-inner .box-img {
+        width: 100%;
+    }
+
+    #interview-archive .labo-list .labo-item .labo-item-inner .box-text {
+        width: 100%;
+        position: relative;
+        z-index: 0;
+    }
+
+    #interview-archive .labo-inner {
+        margin: 40px auto 0;
+    }
+
+    #interview-archive .labo-inner h1 {
+        font-size: 26px;
+    }
+
+    #interview-archive .labo-inner{
+        padding: 0 20px;
+    }
+
+    #interview-archive .tag-list li a{
+        padding: 1px 15px 0px 15px;
+        font-size: 16px;
+    }
+
+    #interview-archive .labo-list .labo-item .labo-item-inner .box-text .tag-list{
+        margin-top: 20px;
+    }
+    #interview-archive .labo-list .labo-item .labo-item-inner .box-text h3 {
+        font-size: 20px;
+    }
+
+    #interview-archive .labo-list .labo-item .labo-item-inner .box-text .time-stamp {
+        font-size: 15px;
+        position: relative;
+    }
+
+    #interview-archive .labo-list .labo-item .labo-item-inner .box-text .company-name {
+        font-size: 19px;
+        margin-top: 6px;
+    }
+    #interview-archive .labo-list .labo-item .labo-item-inner .box-text .tag-list {
+        column-gap: 10px;
+    }
+
+    #interview .single-content{
+        padding: 40.5px 20px 56.5px;
+    }
+
+    .tag-list li a{
+        font-size: 15px;
+        padding: 5px 12px 5.9px;
+    }
+
+    .time-stamp{
+        width: 100%;
+    }
+
+    #interview .single-content h1 {
+        font-size: 29px;
+        margin-bottom: 30px;
+    }
+
+    #interview .single-content .feature-img {
+        margin-bottom: 40px;
+    }
+
+    .single #table-of-contents strong {
+        font-size: 20px;
+    }
+    .single #table-of-contents ul li a{
+        font-size: 15px;
+    }
+    .single #table-of-contents{
+        padding: 20px 20px;
+    }
+    #interview .single-content .post-content h2 {
+        font-size: 27px;
+        padding-top: 35px;
+        width: 100%;
+    }
+
+    #interview .single-content .post-content p {
+        font-size: 16px;
+        padding-left: 86px;
+    }
+
+    #interview .single-content .post-content img{
+        margin: 40px 0 20px;
+    }
+
+    #interview .single-content .post-content h2:before{
+        bottom:unset;
+        top: 44px;
+        height:34px
+    }
+
+    #interview .single-content .post-content h2 span {
+        font-size: 34px;
+    }
+
+    #interview .single-content .post-content h3 {
+        margin: 40px 0 10px;
+        padding-left: 86px;
+        font-size: 16px;
+    }
+    #interview .single-content .avatar-box {
+        width: 65px;
+    }
+    #interview .single-content .avatar-box img{
+        margin:0 0 0px 0;
+    }
+    #interview .single-content .avatar-box p{
+        padding-left: 0;
+        font-size: 13px;
+    }
+
+    #interview .single-content .address p {
+        font-size: 16px;
+    }
+
+    #interview .single-content .button-list li a{
+        width: 300px;
+        font-size: 20px;
+    }
+
+    #interview .single-content .button-list{
+        justify-content: center;
+        row-gap: 20px;
+    }
+
+    #interview .single-content .company-name {
+        font-size: 26px;
+    }
+}

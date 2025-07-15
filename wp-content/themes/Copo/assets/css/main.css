@@ -672,6 +672,7 @@ picture{
 
     .single .single-ttl span.jp{
         font-size: 18px;
+        padding: 0 35px;
     }
 
     .single .category-list .category-item a{
@@ -951,6 +952,9 @@ picture{
     .footer .footer-inner .footer-end {
         width: auto;
         margin: 15px 0 0 auto;
+    }
+    .single #table-of-contents ul li a:before{
+        top: 9px;
     }
 }
 

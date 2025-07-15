@@ -150,3 +150,22 @@
     width: 100%;
     text-align: center;
 }
+
+@media(max-width: 767px){
+    #movie .movie-wrap {
+        width: 100%;
+    }
+    #movie .movie-wrap .thumbnail {
+        height: 191px;
+    }
+    #movie .movie-wrap .movie-title {
+        font-size: 14px;
+    }
+    #movie .movie-wrap .company {
+        font-size: 16px;
+        margin-top:10px;
+    }
+    #movie .movie-list{
+        row-gap: 40px;
+    }
+}

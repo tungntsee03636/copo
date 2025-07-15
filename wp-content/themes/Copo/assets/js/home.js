@@ -89,7 +89,7 @@ jQuery(document).ready(function ($) {
         },
 
         autoplay: {
-            delay: 3000000,
+            delay: 3000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
         },
@@ -118,7 +118,7 @@ jQuery(document).ready(function ($) {
         },
 
         autoplay: {
-            delay: 300000,
+            delay: 3000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
         },
