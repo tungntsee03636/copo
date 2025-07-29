@@ -745,9 +745,11 @@
     right: 35.7px;
     transition: .3s;
 }
+
 .popup-content .link-list li a:hover img{
     right:40.7px;
 }
+
 .close-btn {
     font-size: 25px;
     cursor: pointer;
@@ -821,6 +823,7 @@
 
     #homepage .short-movie-list {
         margin: 60px 0 0px 0;
+        padding-bottom: 94px;
     }
     #homepage {
         padding: 0px 0 0px 0;
@@ -867,7 +870,7 @@
         top: -49.6px;
     }
     #homepage .calling .calling-inner .calling-list .calling-item.swiper-slide-active {
-        margin: 0 29px 0 16px !important;
+        margin: 0 31px 0 8px !important;
     }
 
     #homepage .calling .calling-inner .calling-list .calling-item.swiper-slide-active img {
@@ -875,7 +878,7 @@
     }
 
     #homepage .calling .calling-inner .calling-list .swiper-wrapper {
-        left: -15px;
+        left: 4px;
     }
 
     #homepage .pickup .pickup-inner {
@@ -891,6 +894,10 @@
         margin: 30px 0 54px 0;
     }
 
+    #homepage .movies-interviews .movies-interviews-inner .company-movie-list .movie-item img{
+        height: 145px;
+    }
+
     #homepage .pickup .pickup-inner .company-articles .articles-list{
         row-gap:21.4px;
     }
@@ -902,20 +909,29 @@
     }
 
     #homepage .movies-interviews .movies-interviews-inner .company-movie-list .movie-item.swiper-slide-active img{
-        transform: scale(1);
+        transform: scale(1.2);
+    }
+
+    #homepage .movies-interviews .movies-interviews-inner .company-movie-list .movie-item.swiper-slide-active{
+        margin: 0 49px 0 26px !important;
+    }
+
+
+    #homepage .movies-interviews .movies-interviews-inner .company-movie-list .swiper-wrapper{
+        left: -25px;
     }
 
     #homepage .movies-interviews .movies-interviews-inner .company-movie-list {
         margin-top: 60px;
-        padding-bottom: 150px;
+        padding-bottom: 190px;
     }
 
     #homepage .movies-interviews .movies-interviews-inner .company-movie-list .movie-item.swiper-slide-active:before {
         width: 60px;
         height: 60px;
         background-size: cover;
-        top: -27px;
-        left: -11px;
+        top: -47px;
+        left: -41px;
     }
     #homepage .movies-interviews .movies-interviews-inner .company-movie-list .paginationn{
         bottom: 33px;
@@ -927,7 +943,7 @@
     }
 
     #homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner {
-        padding-bottom: 60px;
+        padding-bottom: 0px;
     }
 
     #homepage .pickup .pickup-inner .hint h2{
@@ -989,5 +1005,17 @@
         width: 100%;
         height: 446px;
 
+    }
+
+    #homepage .hint-list .hint-list-inner{
+        padding-bottom: 0px;
+    }
+
+    #homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .interview-item, #homepage .hint-list .hint-list-inner .hint-item{
+        margin: 0 auto 40px !important;
+    }
+
+    #homepage .short-movie-list .short-movie-item .text-box{
+        display:none;
     }
 }

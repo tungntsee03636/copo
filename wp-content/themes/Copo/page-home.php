@@ -485,7 +485,7 @@ get_header();
                         <img class="avatar" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/lamp.png" alt="">
                     </h2>
                     <p class="note">コポラボ</p>
-                    <p class="subt">～仕事選びの新しい視点と、役立つ情報を発信～</p>
+                    <p class="subt">～仕事選びの新しい視点と、<br class="sp-br">役立つ情報を発信～</p>
                 </div>
             </div>
 
@@ -536,7 +536,7 @@ get_header();
                 <span class="paginationn"></span>
             </div>
 
-            <a href="/copo-labo" class="mbutton trans">ノウハウ記事をもっと見る
+                <a href="/copo-labo" class="mbutton trans">ノウハウ記事をもっと見る
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
                     <defs>
                         <clipPath id="clip-path">

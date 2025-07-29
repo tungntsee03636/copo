@@ -932,7 +932,7 @@ picture{
         justify-content: flex-start;
         position: relative;
          right: 0px;
-        row-gap: 40px;
+        row-gap: 17px;
     }
 
     .footer .footer-inner .box-right {
@@ -948,6 +948,7 @@ picture{
     .footer .footer-inner .footer-end a {
         padding-left: 0;
         margin-bottom: 48px;
+        display: none;
     }
     .footer .footer-inner .footer-end {
         width: auto;
@@ -955,6 +956,15 @@ picture{
     }
     .single #table-of-contents ul li a:before{
         top: 9px;
+    }
+
+    .footer .footer-inner .mb-grid{
+        position: relative;
+        padding-bottom:100px;
+    }
+    .footer .footer-inner .box-left .mbutton{
+        position: absolute;
+        bottom: 11px;
     }
 }
 

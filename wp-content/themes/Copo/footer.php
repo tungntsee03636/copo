@@ -17,11 +17,11 @@
 <!--            FOOTER-->
 <div class="footer">
     <div class="footer-inner">
-        <div class="fl">
+        <div class="fl mb-grid">
             <div class="box-left">
                 <img class="footer-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg">
 
-                <a href="#" class="mbutton">掲載のお申し込みはこちら
+                <a href="#" class="mbutton pc-br">掲載のお申し込みはこちら
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
                         <defs>
                             <clipPath id="clip-path">

@@ -78,10 +78,10 @@ jQuery(document).ready(function ($) {
     const swiper01 = new Swiper(".calling-list", {
         centeredSlides: true,
         simulateTouch:true,
-        slidesPerView: 1.241,
+        slidesPerView: 1.40,
         grabCursor: true,
         freeMode: false,
-        spaceBetween: 14,
+        spaceBetween: 23,
         loop: true,
         mousewheel: false,
         keyboard: {
@@ -106,11 +106,11 @@ jQuery(document).ready(function ($) {
     const swiper02 = new Swiper(".company-movie-list", {
         centeredSlides: true,
         simulateTouch:true,
-        slidesPerView: 1.12,
+        slidesPerView: 1.4,
         // slidesPerView: "auto",
         grabCursor: true,
         freeMode: false,
-        spaceBetween: 14,
+        spaceBetween: 23,
         loop: true,
         mousewheel: false,
         keyboard: {
@@ -146,7 +146,7 @@ jQuery(document).ready(function ($) {
         grabCursor: true,
         freeMode: false,
         spaceBetween: 40,
-        loop: true,
+        loop: false,
         mousewheel: false,
         keyboard: {
             enabled: true
@@ -154,17 +154,19 @@ jQuery(document).ready(function ($) {
 
         breakpoints: {
             767: {
+                loop: true,
                 centeredSlides: false,
                 slidesPerView: 4.05,
                 spaceBetween: 30,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
             },
         },
 
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-        },
+        autoplay: false,
 
         pagination: {
             el: ".interviews-list-inner .paginationn",
@@ -183,7 +185,7 @@ jQuery(document).ready(function ($) {
         grabCursor: true,
         freeMode: false,
         spaceBetween: 40,
-        loop: true,
+        loop: false,
         mousewheel: false,
         keyboard: {
             enabled: true
@@ -191,6 +193,7 @@ jQuery(document).ready(function ($) {
 
         breakpoints: {
             767: {
+                loop: true,
                 centeredSlides: false,
                 slidesPerView: 4.05,
                 spaceBetween: 30,
@@ -210,5 +213,15 @@ jQuery(document).ready(function ($) {
         },
 
     });
+
+    if ($(window).width() < 768) {
+        $('.interviews-list-inner').attr('class', 'interviews-list-inner');
+        $('.interview-item').attr('class', 'interview-item');
+        $('.interviews-list .swiper-wrapper').attr('class', 'new-wrapper');
+
+        $('.hint-list-inner').attr('class', 'hint-list-inner');
+        $('.hint-item').attr('class', 'hint-item');
+        $('.hint-list-inner .swiper-wrapper').attr('class', 'new-wrapper');
+    }
 
 });

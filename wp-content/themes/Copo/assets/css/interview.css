@@ -299,6 +299,11 @@
 }
 
 @media (max-width: 767px) {
+    #interview-archive .labo-list .labo-item .labo-item-inner{
+        flex-direction: column-reverse;
+        padding: 22px 0;
+        row-gap: 13.5px;
+    }
     #interview-archive .labo-list .labo-item .labo-item-inner .box-img {
         width: 100%;
     }
@@ -322,8 +327,9 @@
     }
 
     #interview-archive .tag-list li a{
-        padding: 1px 15px 0px 15px;
-        font-size: 16px;
+        padding: 1px 12px 0px 12px !important;
+        font-size: 13px;
+        background-image: linear-gradient(to bottom, #ffaa89, #fea187 18%, #fd9d86 32%, #fb7d81 54%, #f74978) !important;
     }
 
     #interview-archive .labo-list .labo-item .labo-item-inner .box-text .tag-list{
@@ -334,8 +340,10 @@
     }
 
     #interview-archive .labo-list .labo-item .labo-item-inner .box-text .time-stamp {
-        font-size: 15px;
-        position: relative;
+        font-size: 17px;
+        width: fit-content;
+        top: -6px;
+        right: 0;
     }
 
     #interview-archive .labo-list .labo-item .labo-item-inner .box-text .company-name {
@@ -343,7 +351,8 @@
         margin-top: 6px;
     }
     #interview-archive .labo-list .labo-item .labo-item-inner .box-text .tag-list {
-        column-gap: 10px;
+        column-gap: 3.6px;
+        margin-top: 0;
     }
 
     #interview .single-content{
@@ -353,6 +362,7 @@
     .tag-list li a{
         font-size: 15px;
         padding: 5px 12px 5.9px;
+        line-height: 1;
     }
 
     .time-stamp{
@@ -378,7 +388,7 @@
         padding: 20px 20px;
     }
     #interview .single-content .post-content h2 {
-        font-size: 27px;
+        font-size: 23px;
         padding-top: 35px;
         width: 100%;
     }
@@ -389,7 +399,9 @@
     }
 
     #interview .single-content .post-content img{
-        margin: 40px 0 20px;
+        margin: 40px -20px 20px;
+        width: calc(100% + 40px);
+        max-width: unset;
     }
 
     #interview .single-content .post-content h2:before{
@@ -400,6 +412,7 @@
 
     #interview .single-content .post-content h2 span {
         font-size: 34px;
+        display: block;
     }
 
     #interview .single-content .post-content h3 {
@@ -411,7 +424,8 @@
         width: 65px;
     }
     #interview .single-content .avatar-box img{
-        margin:0 0 0px 0;
+        margin: 0 0 0px 0;
+        max-width: 100%;
     }
     #interview .single-content .avatar-box p{
         padding-left: 0;

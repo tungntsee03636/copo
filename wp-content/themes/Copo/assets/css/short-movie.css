@@ -224,10 +224,24 @@
 @media(max-width: 767px){
 
     #short-movie .short-movie-list .short-movie-list-inner .short-movie-item{
-        width: 100%;
+        width: 48%;
     }
+
+    .short-movie-item .video-inner{
+        height: 289px;
+    }
+
+    .short-movie-item .video-title{
+        font-size: 12px;
+        padding: 0 10px;
+        margin-top: 5px;
+    }
+
+
     #short-movie .short-movie-list .short-movie-list-inner{
         row-gap: 28px;
+        justify-content: space-between;
+        column-gap: unset;
     }
 
     #short-movie{
@@ -260,4 +274,10 @@
 
     }
 
+}
+
+@media(max-width: 360px){
+    .short-movie-item .video-inner {
+        height: 244px;
+    }
 }
