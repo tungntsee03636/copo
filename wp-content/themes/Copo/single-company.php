@@ -17,32 +17,22 @@ get_header();
         </div>
         <div class="inner-1468 single-content">
             <picture class="js-fadein sbanner">
-                <source media="(max-width: 767px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sbanner.png 2x">
-                <source media="(min-width: 768px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sbanner.png 2x">
-                <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sbanner.png" alt="">
+                <source media="(max-width: 767px)" srcset="<?php echo get_field('company_img'); ?>">
+                <source media="(min-width: 768px)" srcset="<?php echo get_field('company_img'); ?>">
+                <img class="sizes" src="<?php echo get_field('company_img'); ?>" alt="">
             </picture>
 
-            <p class="company-name">株式会社〇〇〇〇〇〇</p>
+            <p class="company-name"><?php echo get_field('company_name'); ?></p>
             <!--        CONTENT01-->
             <div class="content01">
-                <img class="company-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company-logo.png">
+                <img class="company-logo" src="<?php echo get_field('company_logo'); ?>">
                 <h1 class="company-title">タイトルタイトルタイトル</h1>
                 <picture class="js-fadein">
-                    <source media="(max-width: 767px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/c01.png 2x">
-                    <source media="(min-width: 768px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/c01.png 2x">
-                    <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/c01.png" alt="">
+                    <?php the_post_thumbnail('full'); ?>
                 </picture>
-                <h2>リード文リード文リード文リード文リード文リード文<br>
-                    リード文リード文リード文リード文リード文リード文リード文</h2>
+                <h2><?php echo get_field('sub_title'); ?></h2>
                 <div class="company-box">
-                    <p>記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面<br class="pc-br">
-                        事内容文面記事内容文面記事内容文面記事内容文面記事内容文面<br class="pc-br">
-                        記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面<br class="pc-br">
-                        記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面<br class="pc-br">
-                        記事内容文面記事内容文面記事内容文面<br class="pc-br">
-                        記事内容文面記事内容文面記事内容文面記事内容文面<br class="pc-br">
-                        記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面
-                    </p>
+                    <?php echo get_field('description'); ?>
                     <img class="bor botren" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/botren.png">
                     <img class="bor boduoi" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/boduoi.png">
                 </div>
@@ -51,45 +41,25 @@ get_header();
             <!--        CONTENT02-->
             <div class="content02">
                 <dl class="person-list">
+                    <?php while( have_rows('person_list') ): the_row();
+                        $image = get_sub_field('person_image');
+                        $title = get_sub_field('person_title');
+                        $description = get_sub_field('person_description');
+                        ?>
                     <dt class="person-item fl">
                         <div class="box-img">
                             <picture class="js-fadein">
-                                <source media="(max-width: 767px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/p01.png 2x">
-                                <source media="(min-width: 768px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/p01.png 2x">
-                                <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/p01.png" alt="">
+                                <source media="(max-width: 767px)" srcset="<?php echo $image; ?>">
+                                <source media="(min-width: 768px)" srcset="<?php echo $image; ?>">
+                                <img class="sizes" src="<?php echo $image; ?>" alt="">
                             </picture>
                         </div>
                         <div class="box-text">
-                            <h2 class="ttl">インタビュー記事タイトル</h2>
-                            <p class="text">
-                                記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面<br>
-                                　記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面<br>
-                                記事内容文面記事内容文面記事内容文面<br>
-                                記事内容文面記事内容文面記事内容文面記事内容文面<br>
-                                記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面
-                            </p>
+                            <h2 class="ttl"><?php echo $title; ?></h2>
+                            <?php echo $description; ?>
                         </div>
                     </dt>
-
-                    <dt class="person-item fl">
-                        <div class="box-img">
-                            <picture class="js-fadein">
-                                <source media="(max-width: 767px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/p02.png 2x">
-                                <source media="(min-width: 768px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/p02.png 2x">
-                                <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/p02.png" alt="">
-                            </picture>
-                        </div>
-                        <div class="box-text">
-                            <h2 class="ttl">インタビュー記事タイトル</h2>
-                            <p class="text">
-                                記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面<br>
-                                　記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面<br>
-                                記事内容文面記事内容文面記事内容文面<br>
-                                記事内容文面記事内容文面記事内容文面記事内容文面<br>
-                                記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面
-                            </p>
-                        </div>
-                    </dt>
+                    <?php endwhile; ?>
                 </dl>
             </div>
             <!--        CONTENT03-->

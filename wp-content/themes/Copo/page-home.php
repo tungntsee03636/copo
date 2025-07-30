@@ -209,30 +209,32 @@ get_header();
 <!--                LOGO LIST-->
                 <div class="logo-list">
                     <div class="logo-list-inner fl">
+                        <?php
+
+                        $args = array(
+                            'post_type' => 'company',
+                            'posts_per_page' => 8,
+                        );
+
+                        $company = new WP_Query($args);
+
+                        ?>
+
+                        <?php
+                        if ($company->have_posts()) :
+                        while ($company->have_posts()) : $company->the_post();
+                        ?>
                         <div class="logo-item">
-                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/clogo01.png" alt="">
+                            <a href="<?php the_permalink(); ?>"><img class="sizes" src="<?php echo get_field("company_logo"); ?>" alt=""></a>
                         </div>
-                        <div class="logo-item">
-                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/clogo02.png" alt="">
-                        </div>
-                        <div class="logo-item">
-                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/clogo03.png" alt="">
-                        </div>
-                        <div class="logo-item">
-                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/clogo04.png" alt="">
-                        </div>
-                        <div class="logo-item">
-                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/clogo05.png" alt="">
-                        </div>
-                        <div class="logo-item">
-                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/clogo06.png" alt="">
-                        </div>
-                        <div class="logo-item">
-                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/clogo07.png" alt="">
-                        </div>
-                        <div class="logo-item">
-                            <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/clogo08.png" alt="">
-                        </div>
+
+                        <?php endwhile;
+                            wp_reset_postdata();
+                        else :
+                            echo '<p>No Company</p>';
+                        endif;
+                        ?>
+
                     </div>
                 </div>
 

@@ -326,6 +326,8 @@ picture{
 
 .single .single-content .content01{
     padding-top: 51.6px;
+    max-width: 1184.12px;
+    margin: 0 auto;
 }
 
 .single .single-content .content01 .company-logo{
@@ -371,6 +373,8 @@ picture{
     letter-spacing: normal;
     text-align: center;
     color: #666;
+    max-width: 80%;
+    margin: 0 auto;
 }
 .single .single-content .content01 .company-box{
     padding: 34.2px 0 48px 0;
@@ -422,7 +426,7 @@ picture{
     margin-top: 20px;
 }
 
-.single .single-content .content02 .person-list .person-item .box-text .text{
+.single .single-content .content02 .person-list .person-item .box-text p{
     font-size: 16px;
     font-weight: bold;
     font-stretch: normal;
@@ -730,6 +734,7 @@ picture{
         color: #000;
         text-align: center;
         padding: 0 26px;
+        max-width: 86%;
     }
     .single .single-content .content01 .company-box .bor {
         width: 174.86px;
