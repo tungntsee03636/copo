@@ -31,10 +31,12 @@ get_header();
                 <h1><?php echo get_the_title(); ?></h1>
                 <p class="company-name"><?php echo get_field('company_name'); ?></p>
 
-
                 <picture class="js-fadein feature-img">
-                    <?php the_post_thumbnail('full'); ?>
+                    <source media="(max-width: 767px)" srcset="<?php echo get_field('schedule_img_mobile'); ?>">
+                    <source media="(min-width: 768px)" srcset="<?php echo get_field('schedule_img_pc'); ?>">
+                    <img class="sizes" src="<?php echo get_field('schedule_img_pc'); ?>" alt="">
                 </picture>
+
 
                 <div class="feature-img-description"><?php echo get_field('feature_img_description');?></div>
 
