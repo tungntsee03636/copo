@@ -843,8 +843,10 @@
     }
 
     #homepage .mbutton svg{
-        width: 12.59px;
-        margin-left: 13px;
+        width: 10.59px;
+        margin-left: 4px;
+        top: 1px;
+        position: relative;
     }
     #homepage .short-movie {
         padding-bottom: 46.2px;
@@ -964,12 +966,14 @@
     }
 
     #homepage .hint-list .banner-home {
+        border-top: solid 4px #000;
         margin: 69px auto 0 auto;
     }
 
     #homepage .mbutton {
         font-size: 15px;
-        padding: 11px 52.3px 11.7px 54.6px;
+        padding: 11px 0 11.7px;
+        width: 290px;
     }
 
     .footer .footer-inner .footer-end .copyright{

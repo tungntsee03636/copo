@@ -479,7 +479,6 @@ picture{
     /*padding-top:39.2px;*/
     background: #ffffff;
     border: solid 4px #000;
-    border-top:none;
     border-bottom:none;
 }
 .banner-bottom img{
@@ -667,7 +666,7 @@ picture{
     /*SINGLE*/
     /*SINGLE COMPANY*/
     .single{
-        padding: 42px 0 0px 0;
+        padding: 42px 0 62px 0;
         border:none;
     }
     .single .single-ttl span.en{
@@ -694,8 +693,9 @@ picture{
         width: calc(100%);
     }
     .single .single-content{
-        border: none;
-        padding:40.5px 0 56.5px 0;
+        border-left: none;
+        border-right: none;
+        padding: 40.5px 0 56.5px 0;
     }
     .single-content .sbanner{
         max-width: 338px;
@@ -812,9 +812,11 @@ picture{
 
     /*FOOTER*/
     .banner-bottom .inner{
-        padding-top: 0px;
         border: none;
+        border-top: solid 4px #000;
+        padding-top: 0px;
     }
+
     .main-header{
         z-index: 9999;
     }
@@ -929,7 +931,8 @@ picture{
     }
 
     .footer .footer-inner .box-left .mbutton svg {
-        margin-left: 16px;
+        margin-left: 5px;
+        width: 12px;
     }
 
     .footer .footer-inner .footer-start {
