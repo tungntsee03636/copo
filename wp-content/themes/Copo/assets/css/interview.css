@@ -327,7 +327,7 @@
     }
 
     #interview-archive .tag-list li a{
-        padding: 1px 12px 0px 12px !important;
+        padding: 5px 12px 5px 12px !important;
         font-size: 13px;
         background-image: linear-gradient(to bottom, #ffaa89, #fea187 18%, #fd9d86 32%, #fb7d81 54%, #f74978) !important;
     }
