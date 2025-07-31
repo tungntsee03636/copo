@@ -200,7 +200,7 @@ get_header();
         </section>
 
 <!--            PICKUP COMPANY-->
-        <section class="pickup">
+        <section class="pickup" style="display: none;">
             <div class="pickup-inner">
                 <h2 class="single-ttl">
                     <span class="en"><small>p</small>ick up <small>c</small>ompany</span>

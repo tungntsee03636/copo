@@ -4,7 +4,7 @@
 
 <div class="banner-bottom">
     <div class="inner">
-        <a class="#">
+        <a class="https://ten.1049.cc/" target="_blank">
             <picture >
                 <source media="(max-width: 767px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/banner-bottom-sp.png 2x">
                 <source media="(min-width: 768px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/tenbanner.png 2x">
@@ -21,7 +21,7 @@
             <div class="box-left">
                 <img class="footer-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg">
 
-                <a href="#" class="mbutton pc-br">掲載のお申し込みはこちら
+                <a href="https://1049.co.jp/contact/" target="_blank" class="mbutton pc-br">掲載のお申し込みはこちら
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.191" height="14.265" viewBox="0 0 16.191 14.265">
                         <defs>
                             <clipPath id="clip-path">
@@ -50,16 +50,17 @@
                     </li>
 
                     <li>
-                        <a class="pdl" href="#">運営会社について</a>
-                        <a href="#">運営会社</a>
-                        <a href="#">tenichi</a>
+                        <a class="pdl">運営会社について</a>
+                        <a href="https://1049.co.jp/company/" target="_blank">運営会社</a>
+                        <a href="https://ten.1049.cc/" target="_blank">tenichi</a>
+                        <a class="pdl sp-br" href="https://1049.co.jp/privacy/" target="_blank">プライバシーポリシー</a>
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="footer-end">
-            <a class="pdl" href="#">プライバシーポリシー</a>
+            <a class="pdl pc-br" href="https://1049.co.jp/privacy/" target="_blank">プライバシーポリシー</a>
             <p class="copyright">© All Rights Reserved.<br class="sp-br"> TENSHOKU ICHIBA INC.</p>
         </div>
     </div>
