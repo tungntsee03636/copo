@@ -4,7 +4,7 @@
 
 <div class="banner-bottom">
     <div class="inner">
-        <a class="https://ten.1049.cc/" target="_blank">
+        <a href="https://ten.1049.cc/" target="_blank">
             <picture >
                 <source media="(max-width: 767px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/banner-bottom-sp.png 2x">
                 <source media="(min-width: 768px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/tenbanner.png 2x">
@@ -50,17 +50,17 @@
                     </li>
 
                     <li>
-                        <a class="pdl">運営会社について</a>
+                        <a class="pdl" style="font-weight: 700;">運営会社について</a>
                         <a href="https://1049.co.jp/company/" target="_blank">運営会社</a>
                         <a href="https://ten.1049.cc/" target="_blank">tenichi</a>
-                        <a class="pdl sp-br" href="https://1049.co.jp/privacy/" target="_blank">プライバシーポリシー</a>
+                        <a class="pdl" href="https://1049.co.jp/privacy/" target="_blank">プライバシーポリシー</a>
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="footer-end">
-            <a class="pdl pc-br" href="https://1049.co.jp/privacy/" target="_blank">プライバシーポリシー</a>
+<!--            <a class="pdl pc-br" href="https://1049.co.jp/privacy/" target="_blank">プライバシーポリシー</a>-->
             <p class="copyright">© All Rights Reserved.<br class="sp-br"> TENSHOKU ICHIBA INC.</p>
         </div>
     </div>

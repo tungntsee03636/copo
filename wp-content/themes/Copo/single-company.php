@@ -65,22 +65,12 @@ get_header();
             <!--        CONTENT03-->
             <div class="content03">
                 <picture class="js-fadein">
-                    <source media="(max-width: 767px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/c02.png 2x">
-                    <source media="(min-width: 768px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/c02.png 2x">
-                    <img class="sizes" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/c02.png" alt="">
+                    <source media="(max-width: 767px)" srcset="<?php echo get_field('bottom_img'); ?>">
+                    <source media="(min-width: 768px)" srcset="<?php echo get_field('bottom_img'); ?>">
+                    <img class="sizes" src="<?php echo get_field('bottom_img'); ?>" alt="">
                 </picture>
-                <h2>リード文リード文リード文リード文リード文リード文<br>
-                    リード文リード文リード文リード文リード文リード文リード文</h2>
-                <p>記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面<br>
-                    記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面<br>
-                    記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面<br>
-                    記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面<br>
-                    記事内容文面記事内容文面記事内容文面<br>
-                    記事内容文面記事内容文面記事内容文面記事内容文面<br>
-                    記事内容文面記事内容文面記事内容文面記事内容文面記事内容文面
-                    <img class="bor botren sp-br" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/botren.png">
-                    <img class="bor boduoi sp-br" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/boduoi.png">
-                </p>
+                <h2><?php echo get_field('bottom_title'); ?></h2>
+                <?php echo get_field('bottom_description'); ?>
             </div>
         </div>
     </section>

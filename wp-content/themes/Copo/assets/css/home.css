@@ -945,7 +945,7 @@
     }
 
     #homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner {
-        padding-bottom: 0px;
+        padding-bottom: 60px;
     }
 
     #homepage .pickup .pickup-inner .hint h2{
@@ -1010,14 +1010,17 @@
         height: 446px;
 
     }
-
     #homepage .hint-list .hint-list-inner{
-        padding-bottom: 0px;
+        padding-bottom: 60px;
     }
 
-    #homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .interview-item, #homepage .hint-list .hint-list-inner .hint-item{
-        margin: 0 auto 40px !important;
-    }
+    /*#homepage .hint-list .hint-list-inner{*/
+    /*    padding-bottom: 0px;*/
+    /*}*/
+
+    /*#homepage .movies-interviews .movies-interviews-inner .company-interviews .interviews-list .interviews-list-inner .interview-item, #homepage .hint-list .hint-list-inner .hint-item{*/
+    /*    margin: 0 auto 40px !important;*/
+    /*}*/
 
     #homepage .short-movie-list .short-movie-item .text-box{
         display:none;

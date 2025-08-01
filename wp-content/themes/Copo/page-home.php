@@ -557,7 +557,7 @@ get_header();
 
 
             <div class="banner-home">
-                    <a class="#">
+                    <a class="https://ten.1049.cc/" target="_blank">
                         <picture>
                             <source media="(max-width: 767px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/banner-bottom-sp.png 2x">
                             <source media="(min-width: 768px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/tenbanner.png 2x">

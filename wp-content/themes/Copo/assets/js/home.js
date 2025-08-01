@@ -146,7 +146,7 @@ jQuery(document).ready(function ($) {
         grabCursor: true,
         freeMode: false,
         spaceBetween: 40,
-        loop: false,
+        loop: true,
         mousewheel: false,
         keyboard: {
             enabled: true
@@ -185,7 +185,7 @@ jQuery(document).ready(function ($) {
         grabCursor: true,
         freeMode: false,
         spaceBetween: 40,
-        loop: false,
+        loop: true,
         mousewheel: false,
         keyboard: {
             enabled: true
@@ -215,13 +215,13 @@ jQuery(document).ready(function ($) {
     });
 
     if ($(window).width() < 768) {
-        $('.interviews-list-inner').attr('class', 'interviews-list-inner');
-        $('.interview-item').attr('class', 'interview-item');
-        $('.interviews-list .swiper-wrapper').attr('class', 'new-wrapper');
-
-        $('.hint-list-inner').attr('class', 'hint-list-inner');
-        $('.hint-item').attr('class', 'hint-item');
-        $('.hint-list-inner .swiper-wrapper').attr('class', 'new-wrapper');
+        // $('.interviews-list-inner').attr('class', 'interviews-list-inner');
+        // $('.interview-item').attr('class', 'interview-item');
+        // $('.interviews-list .swiper-wrapper').attr('class', 'new-wrapper');
+        //
+        // $('.hint-list-inner').attr('class', 'hint-list-inner');
+        // $('.hint-item').attr('class', 'hint-item');
+        // $('.hint-list-inner .swiper-wrapper').attr('class', 'new-wrapper');
     }
 
 });
